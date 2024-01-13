@@ -96,3 +96,18 @@ hr {
     height: 1px; 
     background-color: transparent;  
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    border: 1px solid #000000; 
+    padding: 8px; 
+    text-align: center; 
+  }
+
+  th {
+    background-color: white;
+  }
