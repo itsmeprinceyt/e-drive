@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E Drive - Mohd Uvaish</title>
+    <title>Software Engineering | E Drive - Mohd Uvaish</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="pages.css" type="text/css">
@@ -43,7 +43,14 @@
                 <ul>
                     <li><a href="#char">Characteristics of Good Software</li>
                         <li><a href="#cycle">Software Development Life Cycle</a></li>
-                        <li><a href="#types_models">Types of different Lifecycle Models</a></li>
+                        <li><a href="#types_models">Types of different Lifecycle Models</a>
+                        <ul type="disc">
+                            <li><a href="#cwm">Classical waterfall Model</a></li>
+                            <li><a href="#iwm">Iterative waterfall Model</a></li>
+                            <li><a href="#pm">Prototyping Model</a></li>
+                            <li><a href="#sm">Spiral Model</a></li>
+
+                        </ul></li>
                 </ul>
         </ul>
     </div>
@@ -129,7 +136,7 @@
             </ol>
         </p>
 
-        <h5>Classical Waterfall Model</h5>
+        <h5 id="cwm">Classical Waterfall Model</h5>
         <img src="se/Models/Classif_waterfall_model.png" loading="lazy" style="max-width: 100%; height: auto;" alt="Classic_waterfall_model">
         <h6>Feasibility Study</h6>
         <p>The main aim of feasibility study is to determine wether it would be financially and technically feasible to develop the product.
@@ -179,12 +186,12 @@
             </ul>
         </p>
 
-        <h5>Iterative Waterfall Model</h5>
+        <h5 id="iwm">Iterative Waterfall Model</h5>
         <p>To overcome the major short coming of the classical waterfall model, we came up with the iterative waterfall model.</p>
         <img src="se/Models/Iterative_Waterfall_model.png" loading="lazy" style="max-width: 100%; height: auto;" alt="iterative_waterfall_model">
         <p>Here, we provide feedback paths for error collection has detected later in any phase. The advantage of this model is that there is a working model of the system at a very early stage of development which makes it easier to find functional or design flaws.<br><br>The disadvantage with this SDLC <strong>&#40 Software Development Life Cycle &#41</strong> model is that it is applicable only to large and bulky software development project.</p>
 
-        <h5>Prototyping Model</h5>
+        <h5 id="pm">Prototyping Model</h5>
         <p>A prototype is a toy implementation of the system. A prototype usually exhibits limited functional capabilities, low reliability and insufficient performance compared to the actual software. A prototype is usually built using several shortcuts. The shortcuts might involve using inefficient, inaccurate or dummy functions. A prototype usually turns out to be a very crude version of the actual system.</p>
 
         <h6>Need for a prototype in software development</h6>
@@ -198,7 +205,7 @@
         </p>
         <img src="se/Models/prototype_model.jpeg" loading="lazy" style="max-width: 100%; height: auto;" alt="prototyping_model">
         
-        <h5>Incremental Model</h5>
+        <h5 id="im">Incremental Model</h5>
         <p>It is also called a <strong>successive version model</strong>. At first, a simple working model is built. It under goes functional improvement and we keep on adding new function till the desired system is built.</p>
         <ul>
             <li><strong>Application</strong>
@@ -221,7 +228,7 @@
         </ul>
         <img src="se/Models/Incremental_Model.jpg" loading="lazy" style="max-width: 100%; height: auto;" alt="Incremental_model">
         
-        <h5>Spiral Model</h5>
+        <h5 id="sm">Spiral Model</h5>
         <img src="se/Models/Spiral_model.jpg" loading="lazy" style="max-width: 100%; height: auto;" alt="Spiral Model">
         <p>The Diagrammatic representation of this model appears like a spiral with many loops. The exact number loops in the spiral is not fixed. Each loop of the spiral represents a phase of the software process.<strong>For example, the innermost loop might be concerned with feasibility study, the next loop with requirement specifications, the next one with design and so on.</strong> Each phase in this model is split into four section.</p>
         <ol type="1">
@@ -250,6 +257,25 @@
             
             </li>
         </ol>
+
+        <h6>Circumstances to use Spiral Model</h6>
+        <p>The spiral model is called a <strong>Meta Model</strong> since it encapsulates all other life cycle models. Risk handling is inherently build into this model. The spiral model is suitable for development technically challenging software product. However this model is much more complex than the other model.</p>
+
+        <h6>Comparison of different Life Cycle Model</h6>
+        <p>The classical waterfall model can be considered of basic and all other life cycle model as embellishment of this model. However the classical waterfall model cannot be used in practical development projects. This program is overcome in the iterative waterfall model. The iterative waterfall model is most widely used software development model so far. For this model, it's simple to understand and use. This is not suitable for very large projects and for projects that are subject too many risk.</p><p style="text-indent: 20px;">The prototyping model is suitable for projects for which either the user requirements or the underline technical aspect are not well understood. This model is specially popular for development user interface part of the projects.</p><p style="text-indent: 20px;">The incremental approach suitable for large problems which can be composed into a set of modules for incremental development and delivery. This model is also widely used for object oriented development projects. The spiral model suitable for development for technically challenging software product that have several kinds of risk. This is more complex than the other models that's why this is not used in ordinary project.</p>
+
+        <h6>Requirements Analysis and Specification</h6>
+        <p>Before we start to develop any software it becomes quiet essential for us to understand and document the exact requirement of the customer. Experienced members of the development team carry out t his job. They are called <strong>system analyst.</strong></p>
+        <p style="text-indent: 20px;">The analyst starts requirement gathering analysis activity by collecting all information from the customer and then analyze the collecting information to obtain a clear thorough understanding of the product to be developed. With a view to remove to remove on ambiguities  and inconsistency from the initial customer perception of the problem.<br><br><strong>The following basic questions should be clearly understood by the analyst: </strong>
+        <ol style="font-weight: bold;"type="1">
+            <li>What is the problem?</li>
+            <li>Why is it important to solve the problem?</li>
+            <li>What are the possible solution to the problem?</li>
+            <li>What exactly are the data input to the system and what exactly are the data output by the system?</li>
+            <li>What are the likely complexities that might arise while solving the problem?</li>
+            <li>If there are external software or hardware with which the developed software has to interface, then what exactly would be data inter chain formats with the external system be?</li>
+        </ol>
+        </p>
     </div>
     <div id="banner">
         <p><strong>Where to now?</strong></p>
@@ -259,6 +285,7 @@
             <li><a href="dbms.html">Database Management System</a></li>
             <li><a href="ot.html">Optimization Techniques</a></li>
             <li><a href="maths.html">Mathematics III</a></li>
+            <li><a style="color: #ff3853;"href="contact.html">Contact/Feedback</a></li>
             <li><a href="#">Go To Top</a></li>
     </ul>
     </div>
