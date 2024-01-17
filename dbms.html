@@ -256,9 +256,37 @@
         <img src="dbms/sql/basic_sql_syntax.png" loading="lazy" style="max-width: 100%; height: auto;" alt="Syntax_SQL">
         <h3>Basic SQL Commands</h3>
         <img src="dbms/sql/sql_commands.png" loading="lazy" style="max-width: 100%; height: auto;" alt="Basic_SQL_commands">
+        
         <h3>'ALTER' Command</h3>
-        <p><strong>ALTER</strong> is used when we have to manipulate the core database attributes. Meanwhile <strong>UPDATE</strong> is used to update the database records.</p>
+        <p>&#40 <strong>ALTER</strong> is used when we have to manipulate the core database attributes. Meanwhile <strong>UPDATE</strong> is used to update the database records. &#41</p>
+        <p>Change in schema:
+            <ul>
+                <li>Add column</li>
+                <li>Remove column</li>
+                <li>Modify column</li>
+                <li>Rename column/table</li>
+            </ul>
+            <ol type="i">
+                <li><strong>Add column:</strong><br>ALTER TABLE Student ADD Address varchar(30);</li>
+                <li><strong>Drop column:</strong><br>ALTER TABLE emp DROP COLUMN Address</li>
+                <li><strong>Modify:</strong><br>ALTER TABLE emp MODIFY Id varchar(20);</li>
+                <li><strong>Change column name:</strong><br>ALTER TABLE emp RENAME COLUMN I</li>
+                <li><strong>Change table name:</strong><br>ALTER TABLE emp RENAME to emp1</li>
+            </ol>
+        </p>
         <img src="dbms/sql/ALTER_SQL.png" loading="lazy" style="max-width: 100%; height: auto;" alt="ALTER_SQL">
+
+        <h3>Constraints in SQL</h3>
+        <p>Constraints are the rules that we can apply on the type of data in a table. We can specify the limit on the type of data that can be stored in a particular column in a table using constraints.</p>
+
+        <h6>Rule 1- Unique Constraints</h6>
+        <p>The constraints specify with a column tells that all the values in the column must be unique.</p>
+
+        <h6>Rule 2- Not Null</h6>
+        <p>The primary key which refers not null value.</p>
+
+        <h6>Rule 3- Check Constraints</h6>
+        <p>This constraint helps to validate the values of a column to meet a particular condition i.e., it helps to ensure that the value stored in a column meet a specific condition.</p>
     </div>
     <div id="banner">
         <p><strong>Where to now?</strong></p>
