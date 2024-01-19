@@ -50,7 +50,12 @@
                             <li><a href="#pm">Prototyping Model</a></li>
                             <li><a href="#sm">Spiral Model</a></li>
                         </ul></li>
-                    <li><a href="#srs">Parts of SRS Documents</a></li>
+                    <li><a href="#srs">Parts of SRS Documents</a>
+                    <ul type="disc">
+                        <li><a href="#documents_srs">Documenting Functional Requirement</li>
+                            <li><a href="#properties_srs">Properties of a Good SRS Document</a></li>
+                    </ul>
+                    </li>
                 </ul>
         </ul>
     </div>
@@ -295,7 +300,29 @@
         <p>The goals of Implementation part documents some general suggestion regarding development. These suggestion guide trade of among design goals. The goals of implementation session might <strong>document issue</strong> such as <strong>revision to the system functionalities that may be required in the future, </strong>new devices to be supported in the future, <strong>re-usability issues,etc.</strong> These are the items which the developers might keep in their mind during development.</p>
 
         <h6>Identifying functional Requirements from a Problem Description</h6>
-        <p>To be added . . . .</p>
+        <p>The high level functional requirement often need to be identify either from an informal problem description document or from a conceptual understanding of the problem. The high level requirement characterized a way of system uses by some user to perform some meaningful piece of work. There can be many types of users of a system & their requirements from the system may be very different. So, it is often useful to identify the different types of users who might use the system & then try to identify the requirements from each user's perception.
+            <br>
+            <strong>eg. Consider the case of the library system where,<br>f<sub>i</sub> - search book function</strong><br><strong>strong - author's name<br>output - details of the author's book 7 location of these books in the library.</strong>
+            <br>So, the function 'Search book' { f<sub>i</sub> } takes the author's name & transforms it into book detail.
+            </p>
+
+        <h4 id="documents_srs">Documenting functional Requirement</h4>
+        <p>For documenting the functional requirements we need to specify the set of functionalities supported by the system. A function can be specified by identifying the state at which the data is to be input to the system, it's input data domain, the output data domain & the type of processing to be carried on the input data to obtain the output data.<br><strong>Example:</strong> Withdrawal cash from ATM</p>
+        
+        <h6>R<sub>1</sub> &rarr; Withdraw Cash</h6>
+        <p>First determine the type of account that the user have & the account number from which the user wishes to withdraw cash. Check the balance to determine whether the requested amount is available in the account. if enough balance is available, it outputs required cash otherwise it generates an error message.</p>
+
+        <h6>R<sub>1.1</sub> &rarr; Select Withdraw Amount Option</h6>
+        <p><strong>input &rarr;</strong> withdraw amount option<br><strong>output &rarr;</strong> user prompted to enter the account type</p>
+        
+        <h6>R<sub>1.2</sub> &rarr; Select Account Type</h6>
+        <p><strong>input &rarr;</strong> user option<br><strong>output &rarr;</strong> prompt to enter amount</p>
+
+        <h6>R<sub>1.3</sub> &rarr; Get Required Amount</h6>
+        <p><strong>input &rarr;</strong> amount to be withdrawn in integer value greater than 100 & less than 1000 in multiples of 100.<br><strong>output &rarr;</strong> the requested cash & printed transaction statement.<br><strong>processing &rarr;</strong> the amount is debited from the user's account if sufficient balance is available otherwise an error message is displayed.</p>
+
+        <h4 id="properties_srs">Properties of a Good SRS Document</h4>
+        
     </div>
     <div id="banner">
         <p><strong>Where to now?</strong></p>
