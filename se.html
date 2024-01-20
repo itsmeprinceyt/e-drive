@@ -54,6 +54,7 @@
                     <ul type="disc">
                         <li><a href="#documents_srs">Documenting Functional Requirement</li>
                             <li><a href="#properties_srs">Properties of a Good SRS Document</a></li>
+                            <li><a href="#problems_without_srs">Problem Without a SRS Document</a></li>
                     </ul>
                     </li>
                 </ul>
@@ -322,7 +323,33 @@
         <p><strong>input &rarr;</strong> amount to be withdrawn in integer value greater than 100 & less than 1000 in multiples of 100.<br><strong>output &rarr;</strong> the requested cash & printed transaction statement.<br><strong>processing &rarr;</strong> the amount is debited from the user's account if sufficient balance is available otherwise an error message is displayed.</p>
 
         <h4 id="properties_srs">Properties of a Good SRS Document</h4>
+        <p>The important properties of a good SRS Document are the following:</p>
+        <p style="font-size: 17px;"><strong>Concise</strong></p>
+        <p style="text-indent: 20px;">The SRS Document should be concised & at same time unambiguous, consistent & complete, verbose & if relevant description reduce readability & also increase error possibilities.</p>
         
+        <p style="font-size: 17px;"><strong>Structure</strong></p>
+        <p style="text-indent: 20px;">It should be well structured. A well structured document is easy to understand & modify.</p>
+
+        <p style="font-size: 17px;"><strong>Black Box View</strong></p>
+        <p style="text-indent: 20px;">It should only specify what the system should do & refrain from stalking how to do these. This means that the SRS Document should specify the external behaviour of the system & not discuss the implementation issue. The SRS Document should view the system to be developed as black box & should specify the externally visible behaviour of the system. For this reason the SRS Document is also called <strong>the black box specification of the system.</strong></p>
+
+        <p style="font-size: 17px;"><strong>Conceptual Integrity</strong></p>
+        <p style="text-indent: 20px;">It should show conceptual integrity so that the reader can easily understand it.</p>
+
+        <p style="font-size: 17px;"><strong>Response to Undesired Event</strong></p>
+        <p style="text-indent: 20px;">It should characterized acceptable responses to undesired event. These are called <strong> response to exceptional conditions.</strong></p>
+
+        <p style="font-size: 17px;"><strong>Verifiable</strong></p>
+        <p style="text-indent: 20px;">All requirements of the system as documented in the SRS Document should be verifiable. This means that its should be possible to determine whether or not requirements have been made in an implementation.</p>
+
+        <h4 id="problems_without_srs">Problem Without a SRS Document</h4>
+        <p>The important problem that an organization would face if it doesn't develop a SRS Document are as following -</p>
+        <ol type="i">
+            <li>Without developing the SRS Document, the system would not be implemented according to customer's need.</li>
+            <li>Software developers would not know whether what they are developing is what exactly required by the customer.</li>
+            <li>Without SRS Document, it will be very much difficult for the maintenance engineers to understand the functionalities of the system.</li>
+            <li>It will be very much difficult for users document writers to write the suer's manual properly without understanding the SRS Document.</li>
+        </ol>
     </div>
     <div id="banner">
         <p><strong>Where to now?</strong></p>
