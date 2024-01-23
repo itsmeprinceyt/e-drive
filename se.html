@@ -55,8 +55,11 @@
                         <li><a href="#documents_srs">Documenting Functional Requirement</li>
                             <li><a href="#properties_srs">Properties of a Good SRS Document</a></li>
                             <li><a href="#problems_without_srs">Problem Without a SRS Document</a></li>
+                            <li><a href="#problem_with_unstructured_specification">Problem with an Unstructured Specification</a></li>
                     </ul>
                     </li>
+                    <li><a href="#decision_tree">Decision Tree</a></li>
+                    <li><a href="#decision_table">Decision Table</a></li>
                 </ul>
         </ul>
     </div>
@@ -350,6 +353,136 @@
             <li>Without SRS Document, it will be very much difficult for the maintenance engineers to understand the functionalities of the system.</li>
             <li>It will be very much difficult for users document writers to write the suer's manual properly without understanding the SRS Document.</li>
         </ol>
+
+        <h4 id="problem_with_unstructured_specification">Problem with an Unstructured Specification</h4>
+        <p>&rarr; It would be very difficult to understand that document.<br>&rarr; It would be very much difficult to modify that document.<br>&rarr; Conceptual integrity in that document would not be shown.<br>&rarr; The SRS document might be incomplete & inconsistent.</p>
+
+        <h4 id="decision_tree">Decision Tree</h4>
+        <p>A decision tree gives a graphic view of the processing logic involved in decision making & the corresponding actions taken. The edges of a decision tree represent conditions & the leaf node represents the actions to be perform depending on the outcome of testing the condition.</p>
+        <p><strong>Example: </strong>Consider library membership automation software [LMS] where it should support the following three option:
+        <ul type="none">
+            <li>&rarr; New Member</li>
+            <li>&rarr; Renewal</li>
+            <li>&rarr; Cancel Membership</li>
+        </ul></p>
+
+        <h5>New Member Option</h5>
+        <h6>Decision</h6>
+        <p>When the new member option is selected the software ask details about the member like <strong>member's name, address, phone no, etc.</strong><strong></strong></p>
+        <h6>Action</h6>
+        <p>If proper information is entered then a membership record for the member is created & a bill is printed for the annual membership charge + the security deposit payable.</p>
+
+        <h5>Renewal Option</h5>
+        <h6>Decision</h6>
+        <p>If the renewal option is chosen, the LMS ask for the members name & his membership number to check whether he is a valid member or not.</p>
+
+        <h6>Action</h6>
+        <p>If the membership is valid then membership expiry date is updated & the annual membership bill is printed, otherwise an error message is displayed.</p>
+
+        <h5>Cancel Membership Option</h5>
+        <h6>Decision</h6>
+        <p>If the cancel membership option is selected then the software ask for member's name & his membership number.</p>
+
+        <h6>Action</h6>
+        <p>The membership is cancelled, a cheque for the balance amount due to the member is printed & finally the membership record is deleted from the database.</p>
+        <img src="se/Library Software.jpg" loading="lazy" style="max-width: 100%; height: auto;" alt="Algorithm_Library_Software">
+        <br>
+        <h4 id="decision_table">Decision Table</h4>
+        <p>A decision table is used to represent the complex processing logic in a tabular or a matrix form. The upper rows of the table specify the variables or conditions to be evaluated. The lower rows of the table specify the action to be taken when the corresponding conditions are satisfy. A column in a table is called <strong>Rule</strong>.<br>Rule implies that if a condition is true, then the corresponding action is to be executed.</p>
+        <table>
+            <thead>
+                <th style="text-align: left;" colspan="5"><strong>Conditions</strong>
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: left;">Valid Selection</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">New Member</td>
+                    <td>- </td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Renewal</td>
+                    <td>-</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Cancellation</td>
+                    <td>-</td>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                </tr>
+                <th style="text-align: left;" colspan="5"><strong>Actions</strong>
+                </th>
+                <tr>
+                    <td style="text-align: left;">Display error message</td>
+                    <td>x</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Ask member's details</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Build customer records</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Generate bill</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Ask member's name & membership number</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Update expiry date</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Print cheque</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Delete record</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>x</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <div id="banner">
         <p><strong>Where to now?</strong></p>
