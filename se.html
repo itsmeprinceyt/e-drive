@@ -60,6 +60,14 @@
                     </li>
                     <li><a href="#decision_tree">Decision Tree</a></li>
                     <li><a href="#decision_table">Decision Table</a></li>
+                    <li><a href="#sdesign">Software Design</a>
+                        <ul type="disc">
+                            <li><a href="#modular">Modularization</a></li>
+                            <li><a href="#a_modular">Advantages of Modularization</a></li>
+                            <li><a href="#concurrency">Concurrency</a></li>
+                            <li><a href="#Coupling_Cohesion">Coupling and Cohesion</a></li>
+                        </ul>
+                    </li>
                 </ul>
         </ul>
     </div>
@@ -483,6 +491,43 @@
                 </tr>
             </tbody>
         </table>
+        <br>
+        <h2 id="sdesign">Software Design</h2>
+        <p>Software Design is a process to transform user requirement into some suitable forms which helps the programmer in software coding & implementation. For accessing user requirement and SRS Document is created whereas for coding and Implementation, there is a need of more specific and detailed requirements in software terms. The output of this process can directly be used into implementation in programming language. Software design is the first step in SDLC <strong>&#40 Software Design Life Cycle &#41</strong> , which moves consubstantial from problem domain to solution domain.</p>
+        <p style="text-indent: 20px;">It tries to specify how to fulfill the requirement mention in SRS.</p>
+        <h3>Software Design Levels</h4>
+        <p>There are three levels of software design.</p>
+        <ul>
+            <li>Architectural Design</li>
+            <li>High Level Design</li>
+            <li>Detailed Design </li>
+        </ul>
+        
+        <h4>Architectural Design</h4>
+        <p>The architectural design is the highest abstract version of the system. It identifies the software as a system with many component interactive with each other at this level, the designer get the idea of proposed solution domain.</p>
+        
+        <h4>High Level Design</h4>
+        <p>The high level design breaks single entity, multiple component concept of architectural design into less abstract view of sub system modules and depicts their interaction with each other. High level design focuses on how the system along with all of its components can be implemented in form of modules. It recognize modular structure of each sub system and their relation and interaction among each other.</p>
+        
+        <h4>Detailed Design</h4>
+        <p>Detailed design deals with the implementation part of what is seen as a system and its sub system in the previous tool designs. It is more detailed towards modules and their implementation. it defines logical structure of each module and their interfaces to communicate with other modules.</p>
+
+        <h3 id="modular">Modularization</h3>
+        <p>Modularization is a technique to divide a software into multiple discrete and independent modules, which are expected to be capable of carrying out the task separately. These modules may work as a basic construct for the entire Software. Designers tends to design modules such that they can be executed and compiled separate and independent. Modular design unintentionally follows the rules of divide and conquer problem solving technique. This is because there are many other benefits attached with the modular design of a software.</p>
+
+        <h3 id="a_modular">Advantages Of Modularization</h3>
+        <ol type="1">
+            <li>Smaller Components are easier to maintain.</li>
+            <li>Program can be divided based on functional aspect.</li>
+            <li>Desired Level of Abstraction can be brought into the program.</li>
+            <li>Components which high cohesion can be reused again.</li>
+            <li>Concurrent execution can be made possible. Desired from security aspect.</li>
+        </ol>
+        <h4 id="concurrency">Concurrency</h4>
+        <p>In Software Design, concurrency is implemented by splitting the software into multiple independent unit of execution, like modules and executing them in parallel. In other words, concurrency provides capability to the software to execute more than one part of code in parallel to each other. It is necessary for the programmers and designer to recognize those modules, which can be made parallel execution.<br><strong>eg, The spelling check feature in word processor is a module of software, which runs alongside the word processor itself.</strong></p>
+
+        <h4 id="Coupling_Cohesion">Coupling and Cohesion</h4>
+        <p>When a software program is modularized, its task are divided into several modules based on some characteristics. As we know, modules are set of instructions put together in order to achieve some task. They are considered as single entity but may refer to each other to work together. There are measures by which the quality of a design of modules and their interaction among them can be measured. The measures are called as <strong>coupling and cohesion.</strong></p>
     </div>
     <div id="banner">
         <p><strong>Where to now?</strong></p>
