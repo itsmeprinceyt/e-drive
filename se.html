@@ -70,6 +70,8 @@
                     </li>
                     <li><a href="#design-verification">Design Verification</a></li>
                     <li><a href="#FunctionOrientedDesign">Function Oriented Design</a></li>
+                    <li><a href="#object-oriented-design">Object Oriented Design</a></li>
+                    <li><a href="#SoftwareDesignApproach">Software Design Approach</a></li>
                 </ul>
         </ul>
     </div>
@@ -535,22 +537,22 @@
         <p>Cohesion is a measure that defines the degree introdependibility within element of a module. The greater the cohesion, the better is the program design. There are seven types of cohesion- </p>
         <ol type="i">
             <li><strong>Coincidental Cohesion- </strong>It is unplanned cohesion, which might be the result of breaking the program into smaller modules for the sake of modularization. It may server confusion to the programmers and is generally not accepted.</li>
-            <li><strong>Logical Cohesion- </strong>When logically categorized element are put together into a module, It is called logical cohesion.</li>
-            <li><strong>Temporal Cohesion- </strong>When elements of modules are organized such that they are processed at a similar point in time, it is called <strong>temporal cohesion.</strong></li>
-            <li><strong>Procedural Cohesion- </strong>When elements of module are grouped together, which are executed sequentially in order to perform task, it is called <strong>procedural cohesion.</strong></li>
-            <li><strong>Communicated Cohesion- </strong>When elements of module are grouped together, which are executed sequentially and work on same data ( information ). It is called <strong>communicational cohesion.</strong></li>
-            <li><strong>Sequential Cohesion- </strong>When element of module are grouped because the output of one element serve as input to another and so on, it is called <strong>sequential cohesion.</strong></li>
-            <li><strong>Functional Cohesion- </strong>It is considered to be the highest degree of cohesion, and it is highly expected. Elements of module in functional cohesion a grouped because they all contribute to a single well define function. It can also be reused.</li>
+            <li><strong>Logical Cohesion: </strong>When logically categorized element are put together into a module, It is called logical cohesion.</li>
+            <li><strong>Temporal Cohesion: </strong>When elements of modules are organized such that they are processed at a similar point in time, it is called <strong>temporal cohesion.</strong></li>
+            <li><strong>Procedural Cohesion: </strong>When elements of module are grouped together, which are executed sequentially in order to perform task, it is called <strong>procedural cohesion.</strong></li>
+            <li><strong>Communicated Cohesion: </strong>When elements of module are grouped together, which are executed sequentially and work on same data ( information ). It is called <strong>communicational cohesion.</strong></li>
+            <li><strong>Sequential Cohesion: </strong>When element of module are grouped because the output of one element serve as input to another and so on, it is called <strong>sequential cohesion.</strong></li>
+            <li><strong>Functional Cohesion: </strong>It is considered to be the highest degree of cohesion, and it is highly expected. Elements of module in functional cohesion a grouped because they all contribute to a single well define function. It can also be reused.</li>
         </ol>
 
         <h4 id="coupling">Coupling</h4>
         <p>Coup0ling is a measure that defines the level of interdependability among modules of a program. It tells that what level the modules interfere and interact with each other. The lower the coupling, the greater the program. There are five levels of coupling- </p>
         <ol type="i">
-            <li><strong>Content Coupling- </strong>When a module can directly access or modify or refer to the content of another module, it is called content level coupling.</li>
-            <li><strong>Common Coupling- </strong>When multiple modules helps read and write access to same global data. It is called <strong>common</strong> or <strong>global coupling.</strong></li>
-            <li><strong>Control Coupling- </strong>Two modules are called control coupled. If one of them decides the function of the other module changes its execution.</li>
-            <li><strong>Stamp Coupling- </strong>When multiple modules share common data structure & work on different part of it, it is called <strong>stamp coupling.</strong></li>
-            <li><strong>Data Coupling- </strong>Data coupling is when two modules interact with each other while means of passing data [as parameter]. If a module passes data structure as parameter, then the receiving module should use all its components.</li>
+            <li><strong>Content Coupling: </strong>When a module can directly access or modify or refer to the content of another module, it is called content level coupling.</li>
+            <li><strong>Common Coupling: </strong>When multiple modules helps read and write access to same global data. It is called <strong>common</strong> or <strong>global coupling.</strong></li>
+            <li><strong>Control Coupling: </strong>Two modules are called control coupled. If one of them decides the function of the other module changes its execution.</li>
+            <li><strong>Stamp Coupling:- </strong>When multiple modules share common data structure & work on different part of it, it is called <strong>stamp coupling.</strong></li>
+            <li><strong>Data Coupling: </strong>Data coupling is when two modules interact with each other while means of passing data [as parameter]. If a module passes data structure as parameter, then the receiving module should use all its components.</li>
         </ol>
         
         <h2 id="design-verification">Design Verification</h2>
@@ -560,7 +562,39 @@
 
         <h2 id="FunctionOrientedDesign">Function Oriented Design</h2>
         <p>In function oriented design, the system is comprised of many small sub system known as functions. These functions are capable of performing significant task in the system. The system is considered as <strong>top view of all function.</strong> Function oriented design inherit some properties of structure design where divide & conquer mythology is used. This design mechanism divides the whole system into smaller functions, which provides means of abstraction by concealing the information & their operation. </p>
+        <p>Another characteristics of fun is that <strong>when a program calls a function, the function changes the state of the program. Sometimes is not acceptable by other modules.</strong></p>
+        <p>Function oriented design works well where the system state doesn't matter & program/fun work on input rather than on a state.</p>
 
+        <h3>Design Process</h3>
+        <p>The whole system is seen as how data flows in the system by means of data flow diagram.</p>
+        
+        <h4>DFD [Data Flow Diagram]</h4>
+        <ul >
+            <li>It depicts how function change the data & state of entire system.</li>
+            <li>The entire system is logically broken down into smaller units known as functions on the basis of their operations in the system.</li>
+            <li>Key function is then described at large.</li>
+        </ul>
+
+        <h2 id="object-oriented-design">Object Oriented Design</h2>
+        <p>Object oriented design works around the entities & their characteristics instead of functions involved in the software system. The whole concept of Software solution revolves around the engaged entities.</p>
+        <p>The important concept of object oriented design- </p>
+        <ol type="1">
+            <li><strong>Object: </strong>All entities involve in solution design are known as object. Every entity has some attributes associated to it & has some methods on the attribute.</li>
+            <li><strong>Classes: </strong>A class is a generalized description of an object. An object is an instance of a class. Class defines all the attributes, which an object can have methods, which defines the functionality of the object. In the solution design, attributes are stored as variables & functionalities are defined by means of method or procedures.</li>
+            <li><strong>Encapsulation: </strong>The attributes [data variables] & the methods [operation on the data] are bundled together is called <strong>encapsulation.</strong> Encapsulation not only bundles important information of an object together, but also restrict abstract of data & methods from the outside worlds. This is called <strong>information hiding.</strong></li>
+            <li><strong>Inheritance: </strong>Object oriented design allows single classes to stack up in heirarchical manner where the lower or such classes can import, implement & reuse allow variables & methods from where immediate super classes. This property of object oriented design is known as <strong>inheritance.</strong></li>
+            <li><strong>Polymorphism: </strong>Object oriented design languages provide a mechanism where methods performing similar task but vary in arguments, can be assigned same name. This is called <strong>polymorphism</strong>, which allows a single interface performing task for different types.</li>
+        </ol>
+        <h3>Design Process</h3>
+        <p>Software design process can be perceived as a series of well defined steps. It may varies according to design approach [fun oriented or object oriented]. It may have the following steps involves:</p>
+        <ul>
+            <li><strong>A solution design is created from requirements or previous used system & system sequence diagrams.</strong></li>
+            <li><strong>Objects are identified & grouped into classes on behalf of similarity in attribute characteristics.</strong></li>
+            <li><strong>Class hierarchy & relation among them are define.</strong></li>
+            <li><strong>Application frame work is defined.</strong></li>
+        </ul>
+
+        <h2 id="SoftwareDesignApproach">Software Design Approach</h2>
     </div>
     <div id="banner">
         <p><strong>Where to now?</strong></p>
@@ -574,6 +608,7 @@
             <li><a href="#">Go To Top</a></li>
     </ul>
     </div>
+    <div id="banner" style="opacity: 0;"></div>
     <script src="script.js"></script>
 </body>
 </html>
