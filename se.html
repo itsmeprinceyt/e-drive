@@ -582,7 +582,7 @@
             <li><strong>Object: </strong>All entities involve in solution design are known as object. Every entity has some attributes associated to it & has some methods on the attribute.</li>
             <li><strong>Classes: </strong>A class is a generalized description of an object. An object is an instance of a class. Class defines all the attributes, which an object can have methods, which defines the functionality of the object. In the solution design, attributes are stored as variables & functionalities are defined by means of method or procedures.</li>
             <li><strong>Encapsulation: </strong>The attributes [data variables] & the methods [operation on the data] are bundled together is called <strong>encapsulation.</strong> Encapsulation not only bundles important information of an object together, but also restrict abstract of data & methods from the outside worlds. This is called <strong>information hiding.</strong></li>
-            <li><strong>Inheritance: </strong>Object oriented design allows single classes to stack up in heirarchical manner where the lower or such classes can import, implement & reuse allow variables & methods from where immediate super classes. This property of object oriented design is known as <strong>inheritance.</strong></li>
+            <li><strong>Inheritance: </strong>Object oriented design allows single classes to stack up in hierarchical manner where the lower or such classes can import, implement & reuse allow variables & methods from where immediate super classes. This property of object oriented design is known as <strong>inheritance.</strong></li>
             <li><strong>Polymorphism: </strong>Object oriented design languages provide a mechanism where methods performing similar task but vary in arguments, can be assigned same name. This is called <strong>polymorphism</strong>, which allows a single interface performing task for different types.</li>
         </ol>
         <h3>Design Process</h3>
@@ -595,6 +595,71 @@
         </ul>
 
         <h2 id="SoftwareDesignApproach">Software Design Approach</h2>
+        <p>There are two generic approach for software designing-</p>
+        <ol type="i">
+            <li><strong>Top-Down Design: </strong>We know that a system is composed of more than one sub-system and it contains a number of components. Further,  these sub systems and components may have there one set of sub system and components of are creates hierarchical structure in the system.<br>Top-Down design takes the whole software system as one entity and when decomposes it to achieve more than one sub-system or components based on some characteristics. Each sub-system or component is then treated as a system and decomposed further. This process keeps on running until the lowest level of system in the top down hierarchy is achieved. Top-Down design is more suitable when the software solution needs to be design from scratched and specific details are unknown.</li>
+            <li><strong>Bottom-Up Design: </strong>The Bottom-Up design model starts with the most specific and basic components, it precedes with composing higher level of components. It keeps dealing higher level component until the desired system is not evolved as one single component with each higher level, the amount of abstraction is increased.<br>Bottom-Up Design is more suitable when a system needs to be created from sum existing system, where the basic preemptive can be use in the new system. Both Top-Down and Bottom-Up approaches are not practical individually. Instead, a good combination of both is used.</li>
+        </ol>
+        <h3>Software Analysis and Designed Tools</h3>
+        <p>Software analysis and designed includes all activities. Which helps the transformation of requirement specification includes implementation. Requirement specification specify all functional & non-functional expectation from the software. These requirement specification come in the shape of human readable and understandable documents. Software Analysis and Design is the intermediate stage, which helps human readable requirements to be transformed into actual code. There are four analysis and design tools used by software designers.</p>
+
+        <h4>(i) DFD [Data Flow Diagram]</h4>
+        <p>Capable of depicting incoming data flow & stored data. The DFD doesn't mention about how data flows through the system. There is a difference between <strong>DFD &Flowchart</strong>. The flowchart depict flow of control in program module, DFD depict flow of data in the system at various levels. DFD doesn't contain any control over branch elements.</p>
+        <h4>Types of DFD</h4>
+        <ol type="1">
+            <li><strong>Logical DFD: </strong>This type of concentrates on the system process & flow of data in the system.<br><strong>For Example:</strong> In a banking software, how data is moving between different entities.</li>
+            <li><strong>Physical DFD: </strong>This types of DFD, shows how the dataflow actually implemented in the system. It is more specific & close to the completion.</li>
+        </ol>
+        <h4>DFD Components</h4>
+        <p>DFD can show / represent, destination storage & flow of data using the following set of component</p>
+        <img src="se/DFD-components.jpg" loading="lazy"alt="DFD-components">
+        <ol type="1">
+            <li><strong>Entities: </strong>Entities are source and destination of information, entities are represented by rectangles with there respective names.</li>
+            <li><strong>Process: </strong>Activities and action taken on the data are represented by circle.</li>
+            <li><strong>Data store: </strong>There are two variants of data storage, it can either be <strong>represented as a rectangle with actions of both smaller size or as an open sided rectangle with only one side missing.</strong></li>
+            <li><strong>Data flow:</strong>Movement of data is shown by quanted arrows. Data movement is shown to from the base of arrow as <strong>its source towards head of the arrows as destination.</strong></li>
+        </ol>
+        
+        <h4 id="importanceOfDFD">Importance of DFD's in Input Software Design</h4>
+        <p>The main reason why DFD's technique is so popular is because of the fact DFD is very simple to understand & use. Starting with a set of of high level function that a system performs are DFD model hierarchically represents various sub functions. The data flow diagramic technique also follows a very simple set of informative concept & rules DFD is an elegant modeling technique that turns out to be useful not only to represent the results of structured analysis of a software problem, but also form several other applications such as <strong>showing the flow of documents or items in an organization.</strong></p>
+        
+        <h4>Data Dictionary </h4>
+        <p>A data dictionary list or data items appearing in the DFD model of a system. A data dictionary list the purpose of all data items & the definition of all composite  data items in terms of their components data items.</p>
+        <p>There are some preemptive data items using the following data definition operations.</p>
+        <p><strong>+ [Addition Sign]</strong>: Denotes composition of two data items.</p>
+        <p><strong>, [Comma Sign]</strong>: Represents selection, that is any one of data items listed in the brackets can occur.</p>
+        <p><strong>( ) [Parenthesis]</strong>: The content inside the brackets represent optional data which may or may not appear.</p>
+        <p><strong>{ } [Curly Brackets]</strong>: Represents iterative data definition.</p>
+        <p><strong>= [Equal Sign]</strong>: Represent equivalence.</p>
+        <p><strong>/* */ [Forward slash with asterisk]</strong>: Anything appearing within this symbol considered as a comment.</p>
+
+        <h4 id="AdvantagesOfDFD">Advantages of DFD</h4>
+        <ol type="1">
+            <li><strong>Easy to understand: </strong>DFD's are graphical representation that are easy to understand & communicate making them useful for non-technical and team members.</li>
+            <li><strong>Include System Analysis: </strong>DFD's are useful for analyzing & system process & data  flow which can help identify problems that may exist in the system. </li>
+            <li><strong>Support System Design: </strong>DFD's can be used to design & system's architecture & structure, which can help ensure that the system is design to meet the requirements of the client.</li>
+            <li><strong>Enables Texting & Verification: </strong>DFD's can be used to identify the inputs & outputs of the system, which can help in the texting & verification of the system's functionality.</li>
+            <li><strong>Facilitate Documentation: </strong>DFD's provides a visual representation of a system, making it easier to document & maintain the system.</li>
+        </ol>
+
+        <h4 id="DisadvantagesOfDFD">Disadvantages of DFD</h4>
+        <ol type="1">
+            <li><strong>Can be time consuming: </strong>Creating DFD's can be a time consuming process, specially for complex system.</li>
+            <li><strong>Limited focus: </strong>DFD's focus on the flow of the data in a system & may not capture other important aspect of the system, such as user interface design, system security or system performances.</li>
+            <li><strong>Can be difficult to keep up-to-date: </strong>DFD's may become out of date overtime as the system evolves & changes.</li>
+            <li><strong>Required technical expertise: </strong>While DFD's are easy to understand, creating them requires to certain level of technical expertise for the system being analyzed.</li>
+        </ol>
+
+        <h2>Level of DFD's</h2>
+        <h4>Level Zero DFD</h4>
+        <p>This is the highest level DFD which provides an overview of the entire system. It shows the major processes data flow & data stores in the system, without providing any details about the internal working of these processes.</p>
+        <h4>Level One DFD</h4>
+        <p>This level provides a more detailed view of the system by breaking down the major processes identified in the level zero DFD into sub processes. Each sub process is defected as a separate process on the Level one DFD. Data close and data stores associated with each sub processes.</p>
+        <h4>Level Two DFD</h4>
+        <p>This level provides an even more detailed view of the system by breaking down the sub processes identify in the Level One DFD into further sub processes.</p>
+        <h4>Level Three DFD</h4>
+        <p>This is the most detailed level of the DFD's which provides a detailed view of the processes, data flow and data stores in the system. This level is used for complex system, where one high level of detailed is required to understand the system, each process on the Level Three DFD is depicted with a detailed description of its input, processing and output.</p>
+        <p><strong>Example: Make a DFD for railway reservation.</strong></p>
     </div>
     <div id="banner">
         <p><strong>Where to now?</strong></p>
