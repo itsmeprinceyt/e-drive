@@ -51,38 +51,15 @@ body {
     margin-bottom: 20px;
 }
 
-a {
+a{
     text-decoration: none;
 }
-
-h1 {
+h1,h5 {
     font-weight: bold;
-    font-family: 'Studio Sans', sans-serif;
 }
-
-h2 {
-    font-weight: bold;
+h1,h2,h3,h4,h5,h6{
     font-family: 'Noto Sans KR', sans-serif;
 }
-
-h3 {
-    font-weight: bold;
-    font-family: 'Noto Sans KR';
-}
-
-h4 {
-    font-weight: bold;
-    font-family: 'Noto Sans KR';
-}
-h5 {
-    font-weight: bold;
-    font-family: 'Noto Sans KR';
-}
-h6 {
-    font-weight: bold;
-    font-family: 'Noto Sans KR';
-}
-
 p {
     font-family: 'Jaldi';
 }
@@ -100,14 +77,26 @@ hr {
 table {
     border-collapse: collapse;
     width: 100%;
-  }
+}
 
-  th, td {
+th, td {
     border: 1px solid #000000; 
     padding: 8px; 
     text-align: center; 
-  }
+}
 
-  th {
+th {
     background-color: white;
-  }
+}
+img{
+    width: 50%;
+    max-width: 50%;
+}
+@media (max-width: 768px)
+{
+    img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}

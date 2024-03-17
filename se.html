@@ -68,6 +68,8 @@
                             <li><a href="#Coupling_Cohesion">Coupling and Cohesion</a></li>
                         </ul>
                     </li>
+                    <li><a href="#design-verification">Design Verification</a></li>
+                    <li><a href="#FunctionOrientedDesign">Function Oriented Design</a></li>
                 </ul>
         </ul>
     </div>
@@ -154,7 +156,7 @@
         </p>
 
         <h5 id="cwm">Classical Waterfall Model</h5>
-        <img src="se/Models/Classif_waterfall_model.png" loading="lazy" style="max-width: 100%; height: auto;" alt="Classic_waterfall_model">
+        <img src="se/Models/Classif_waterfall_model.png" loading="lazy" alt="Classic_waterfall_model">
         <h6>Feasibility Study</h6>
         <p>The main aim of feasibility study is to determine wether it would be financially and technically feasible to develop the product.
             <ol "type="i">
@@ -205,7 +207,7 @@
 
         <h5 id="iwm">Iterative Waterfall Model</h5>
         <p>To overcome the major short coming of the classical waterfall model, we came up with the iterative waterfall model.</p>
-        <img src="se/Models/Iterative_Waterfall_model.png" loading="lazy" style="max-width: 100%; height: auto;" alt="iterative_waterfall_model">
+        <img src="se/Models/Iterative_Waterfall_model.png" loading="lazy" alt="iterative_waterfall_model">
         <p>Here, we provide feedback paths for error collection has detected later in any phase. The advantage of this model is that there is a working model of the system at a very early stage of development which makes it easier to find functional or design flaws.<br><br>The disadvantage with this SDLC <strong>&#40 Software Development Life Cycle &#41</strong> model is that it is applicable only to large and bulky software development project.</p>
 
         <h5 id="pm">Prototyping Model</h5>
@@ -220,7 +222,7 @@
             </ol>
         <p>Another reason for developing a prototype is that it is impossible to get the perfect product in the first attempt. The experience gain in developing the prototype can be used to develop the final product.</p>
         </p>
-        <img src="se/Models/prototype_model.jpeg" loading="lazy" style="max-width: 100%; height: auto;" alt="prototyping_model">
+        <img src="se/Models/prototype_model.jpeg" loading="lazy" alt="prototyping_model">
         
         <h5 id="im">Incremental Model</h5>
         <p>It is also called a <strong>successive version model</strong>. At first, a simple working model is built. It under goes functional improvement and we keep on adding new function till the desired system is built.</p>
@@ -243,10 +245,10 @@
                 </ul>
             </li>
         </ul>
-        <img src="se/Models/Incremental_Model.jpg" loading="lazy" style="max-width: 100%; height: auto;" alt="Incremental_model">
+        <img src="se/Models/Incremental_Model.jpg" loading="lazy" alt="Incremental_model">
         
         <h5 id="sm">Spiral Model</h5>
-        <img src="se/Models/Spiral_model.jpg" loading="lazy" style="max-width: 100%; height: auto;" alt="Spiral Model">
+        <img src="se/Models/Spiral_model.jpg" loading="lazy" alt="Spiral Model">
         <p>The Diagrammatic representation of this model appears like a spiral with many loops. The exact number loops in the spiral is not fixed. Each loop of the spiral represents a phase of the software process.<strong>For example, the innermost loop might be concerned with feasibility study, the next loop with requirement specifications, the next one with design and so on.</strong> Each phase in this model is split into four section.</p>
         <ol type="1">
             <li><strong>First Section &#40 Objective Identification &#41</strong>
@@ -305,7 +307,7 @@
 
         <h6>Functional Requirements</h6>
         <p>The functional requirements part discusses the functionalities requirement from the system. The system is considered to perform a set of <strong>high level functions[ f<sub>i</sub> ].</strong> Each function ' f<sub>i</sub> ' of the system can be considered as <strong>a transformation of set of input data [ i<sub>i</sub> ] to the corresponding set of output data [ O<sub>i</sub> ].</strong> The user can get some meaningful piece of work done using a high level function.</p>
-        <img src="se/SRS_Document.jpg" loading="lazy" style="max-width: 100%; height: auto;" alt="Functional_Requirement">
+        <img src="se/SRS_Document.jpg" loading="lazy" alt="Functional_Requirement">
         <p><strong>Non-functional Requirements</strong> deal with the characteristics of the system which can't be expressed as functions such as <strong>the maintenance of the system, portability of the system usability of the system.</strong></p>
 
         <h6>Goals of Implementation</h6>
@@ -393,7 +395,7 @@
 
         <h6>Action</h6>
         <p>The membership is cancelled, a cheque for the balance amount due to the member is printed & finally the membership record is deleted from the database.</p>
-        <img src="se/Library Software.jpg" loading="lazy" style="max-width: 100%; height: auto;" alt="Algorithm_Library_Software">
+        <img src="se/Library Software.jpg" loading="lazy" alt="Algorithm_Library_Software">
         <br>
         <h4 id="decision_table">Decision Table</h4>
         <p>A decision table is used to represent the complex processing logic in a tabular or a matrix form. The upper rows of the table specify the variables or conditions to be evaluated. The lower rows of the table specify the action to be taken when the corresponding conditions are satisfy. A column in a table is called <strong>Rule</strong>.<br>Rule implies that if a condition is true, then the corresponding action is to be executed.</p>
@@ -528,6 +530,37 @@
 
         <h4 id="Coupling_Cohesion">Coupling and Cohesion</h4>
         <p>When a software program is modularized, its task are divided into several modules based on some characteristics. As we know, modules are set of instructions put together in order to achieve some task. They are considered as single entity but may refer to each other to work together. There are measures by which the quality of a design of modules and their interaction among them can be measured. The measures are called as <strong>coupling and cohesion.</strong></p>
+
+        <h4>Cohesion</h4>
+        <p>Cohesion is a measure that defines the degree introdependibility within element of a module. The greater the cohesion, the better is the program design. There are seven types of cohesion- </p>
+        <ol type="i">
+            <li><strong>Coincidental Cohesion- </strong>It is unplanned cohesion, which might be the result of breaking the program into smaller modules for the sake of modularization. It may server confusion to the programmers and is generally not accepted.</li>
+            <li><strong>Logical Cohesion- </strong>When logically categorized element are put together into a module, It is called logical cohesion.</li>
+            <li><strong>Temporal Cohesion- </strong>When elements of modules are organized such that they are processed at a similar point in time, it is called <strong>temporal cohesion.</strong></li>
+            <li><strong>Procedural Cohesion- </strong>When elements of module are grouped together, which are executed sequentially in order to perform task, it is called <strong>procedural cohesion.</strong></li>
+            <li><strong>Communicated Cohesion- </strong>When elements of module are grouped together, which are executed sequentially and work on same data ( information ). It is called <strong>communicational cohesion.</strong></li>
+            <li><strong>Sequential Cohesion- </strong>When element of module are grouped because the output of one element serve as input to another and so on, it is called <strong>sequential cohesion.</strong></li>
+            <li><strong>Functional Cohesion- </strong>It is considered to be the highest degree of cohesion, and it is highly expected. Elements of module in functional cohesion a grouped because they all contribute to a single well define function. It can also be reused.</li>
+        </ol>
+
+        <h4 id="coupling">Coupling</h4>
+        <p>Coup0ling is a measure that defines the level of interdependability among modules of a program. It tells that what level the modules interfere and interact with each other. The lower the coupling, the greater the program. There are five levels of coupling- </p>
+        <ol type="i">
+            <li><strong>Content Coupling- </strong>When a module can directly access or modify or refer to the content of another module, it is called content level coupling.</li>
+            <li><strong>Common Coupling- </strong>When multiple modules helps read and write access to same global data. It is called <strong>common</strong> or <strong>global coupling.</strong></li>
+            <li><strong>Control Coupling- </strong>Two modules are called control coupled. If one of them decides the function of the other module changes its execution.</li>
+            <li><strong>Stamp Coupling- </strong>When multiple modules share common data structure & work on different part of it, it is called <strong>stamp coupling.</strong></li>
+            <li><strong>Data Coupling- </strong>Data coupling is when two modules interact with each other while means of passing data [as parameter]. If a module passes data structure as parameter, then the receiving module should use all its components.</li>
+        </ol>
+        
+        <h2 id="design-verification">Design Verification</h2>
+        <p>The output of software design process is design documentation pseudo codes, detailed logic diagrams, process diagrams & detailed description of all functional & non-functional requirements.</p>
+        <p>The next phase, which is the implementation of software, depends on all outputs mention above. It is then becomes necessary to verify output before preceding to the next phase. The early any mistake is detected, the greater it is or it might not be detected until testing of the products. If the outputs of design phase is in formal notation form, then their associated tools for verification should be used otherwise a thorough design review can be used for verification & validation.</p>
+        <p>A good design review is important for good software design, accuracy & quality.</p>
+
+        <h2 id="FunctionOrientedDesign">Function Oriented Design</h2>
+        <p>In function oriented design, the system is comprised of many small sub system known as functions. These functions are capable of performing significant task in the system. The system is considered as <strong>top view of all function.</strong> Function oriented design inherit some properties of structure design where divide & conquer mythology is used. This design mechanism divides the whole system into smaller functions, which provides means of abstraction by concealing the information & their operation. </p>
+
     </div>
     <div id="banner">
         <p><strong>Where to now?</strong></p>

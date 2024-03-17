@@ -34,7 +34,7 @@ body {
     color: black;
 }
 .active {
-    color: white;
+    color: #ffffff;
     float: right;
 }
 #banner {
@@ -60,26 +60,11 @@ body {
 a{
     text-decoration: none;
 }
-h1 {
+h1,h5 {
     font-weight: bold;
-    font-family: 'Studio Sans', sans-serif;;
 }
-h2{
+h1,h2,h3,h4,h5,h6{
     font-family: 'Noto Sans KR', sans-serif;
-}
-h3{
-    font-family: 'Noto Sans KR';
-}
-h4{
-    font-family: 'Noto Sans KR';
-}
-h5 {
-    font-weight: bold;
-    font-family: 'Noto Sans KR';
-}
-h6 {
-    font-weight: bold;
-    font-family: 'Noto Sans KR';
 }
 p{
     font-family: 'Jaldi';
