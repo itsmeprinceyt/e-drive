@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="pages.css" type="text/css">
-    <link rel="icon" href="logo_png.png" type="image/x-icon">
+    <link rel="icon" href="LogoPNG.png" type="image/x-icon">
     <link href="https://fonts.cdnfonts.com/css/studio-sans" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Noto Sans KR' rel='stylesheet'>
@@ -72,6 +72,20 @@
                     <li><a href="#FunctionOrientedDesign">Function Oriented Design</a></li>
                     <li><a href="#object-oriented-design">Object Oriented Design</a></li>
                     <li><a href="#SoftwareDesignApproach">Software Design Approach</a></li>
+                    <li><a href="#software-analysis">Software Analysis and Designed Tools</a>
+                        <ul type="disc">
+                            <li><a href="#dfd">DFD [Data Flow Diagram]</a></li>
+                            <li><a href="#type-of-dfd">Types of DFD</a></li>
+                            <li><a href="#dfd-component">DFD Components</a></li>
+                            <li><a href="#importanceOfDFD">Importance of DFD's in Input Software Design</a></li>
+                            <li><a href="#data-dictionary">Data Dictionary</a></li>
+                            <li><a href="#AdvantagesOfDFD">Advantages of DFD</a></li>
+                            <li><a href="#DisadvantagesOfDFD">Disadvantages of DFD</a></li>
+                            <li><a href="#levels-of-dfd">Level of DFD's</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#structured-design">Structured Design</a></li>
+                    <li><a href="#object-modeling-uml">Object-Modeling Using UML</a></li>
                 </ul>
         </ul>
     </div>
@@ -561,7 +575,7 @@
         <p>A good design review is important for good software design, accuracy & quality.</p>
 
         <h2 id="FunctionOrientedDesign">Function Oriented Design</h2>
-        <p>In function oriented design, the system is comprised of many small sub system known as functions. These functions are capable of performing significant task in the system. The system is considered as <strong>top view of all function.</strong> Function oriented design inherit some properties of structure design where divide & conquer mythology is used. This design mechanism divides the whole system into smaller functions, which provides means of abstraction by concealing the information & their operation. </p>
+        <p>In function oriented design, the system is comprised of many small sub system known as functions. These functions are capable of performing significant task in the system. The system is considered as <strong>top view of all function.</strong> Function oriented design inherit some properties of structure design where divide & conquer methodology is used. This design mechanism divides the whole system into smaller functions, which provides means of abstraction by concealing the information & their operation. </p>
         <p>Another characteristics of fun is that <strong>when a program calls a function, the function changes the state of the program. Sometimes is not acceptable by other modules.</strong></p>
         <p>Function oriented design works well where the system state doesn't matter & program/fun work on input rather than on a state.</p>
 
@@ -600,17 +614,17 @@
             <li><strong>Top-Down Design: </strong>We know that a system is composed of more than one sub-system and it contains a number of components. Further,  these sub systems and components may have there one set of sub system and components of are creates hierarchical structure in the system.<br>Top-Down design takes the whole software system as one entity and when decomposes it to achieve more than one sub-system or components based on some characteristics. Each sub-system or component is then treated as a system and decomposed further. This process keeps on running until the lowest level of system in the top down hierarchy is achieved. Top-Down design is more suitable when the software solution needs to be design from scratched and specific details are unknown.</li>
             <li><strong>Bottom-Up Design: </strong>The Bottom-Up design model starts with the most specific and basic components, it precedes with composing higher level of components. It keeps dealing higher level component until the desired system is not evolved as one single component with each higher level, the amount of abstraction is increased.<br>Bottom-Up Design is more suitable when a system needs to be created from sum existing system, where the basic preemptive can be use in the new system. Both Top-Down and Bottom-Up approaches are not practical individually. Instead, a good combination of both is used.</li>
         </ol>
-        <h3>Software Analysis and Designed Tools</h3>
+        <h3 id="software-analysis">Software Analysis and Designed Tools</h3>
         <p>Software analysis and designed includes all activities. Which helps the transformation of requirement specification includes implementation. Requirement specification specify all functional & non-functional expectation from the software. These requirement specification come in the shape of human readable and understandable documents. Software Analysis and Design is the intermediate stage, which helps human readable requirements to be transformed into actual code. There are four analysis and design tools used by software designers.</p>
 
-        <h4>(i) DFD [Data Flow Diagram]</h4>
+        <h4 id="dfd">(i) DFD [Data Flow Diagram]</h4>
         <p>Capable of depicting incoming data flow & stored data. The DFD doesn't mention about how data flows through the system. There is a difference between <strong>DFD &Flowchart</strong>. The flowchart depict flow of control in program module, DFD depict flow of data in the system at various levels. DFD doesn't contain any control over branch elements.</p>
-        <h4>Types of DFD</h4>
+        <h4 id="type-of-dfd">Types of DFD</h4>
         <ol type="1">
             <li><strong>Logical DFD: </strong>This type of concentrates on the system process & flow of data in the system.<br><strong>For Example:</strong> In a banking software, how data is moving between different entities.</li>
             <li><strong>Physical DFD: </strong>This types of DFD, shows how the dataflow actually implemented in the system. It is more specific & close to the completion.</li>
         </ol>
-        <h4>DFD Components</h4>
+        <h4 id="dfd-component">DFD Components</h4>
         <p>DFD can show / represent, destination storage & flow of data using the following set of component</p>
         <img src="se/DFD-components.jpg" loading="lazy"alt="DFD-components">
         <ol type="1">
@@ -623,7 +637,7 @@
         <h4 id="importanceOfDFD">Importance of DFD's in Input Software Design</h4>
         <p>The main reason why DFD's technique is so popular is because of the fact DFD is very simple to understand & use. Starting with a set of of high level function that a system performs are DFD model hierarchically represents various sub functions. The data flow diagramic technique also follows a very simple set of informative concept & rules DFD is an elegant modeling technique that turns out to be useful not only to represent the results of structured analysis of a software problem, but also form several other applications such as <strong>showing the flow of documents or items in an organization.</strong></p>
         
-        <h4>Data Dictionary </h4>
+        <h4 id="data-dictionary">Data Dictionary </h4>
         <p>A data dictionary list or data items appearing in the DFD model of a system. A data dictionary list the purpose of all data items & the definition of all composite  data items in terms of their components data items.</p>
         <p>There are some preemptive data items using the following data definition operations.</p>
         <p><strong>+ [Addition Sign]</strong>: Denotes composition of two data items.</p>
@@ -650,7 +664,7 @@
             <li><strong>Required technical expertise: </strong>While DFD's are easy to understand, creating them requires to certain level of technical expertise for the system being analyzed.</li>
         </ol>
 
-        <h2>Level of DFD's</h2>
+        <h2 id="levels-of-dfd">Level of DFD's</h2>
         <h4>Level Zero DFD</h4>
         <p>This is the highest level DFD which provides an overview of the entire system. It shows the major processes data flow & data stores in the system, without providing any details about the internal working of these processes.</p>
         <h4>Level One DFD</h4>
@@ -660,6 +674,47 @@
         <h4>Level Three DFD</h4>
         <p>This is the most detailed level of the DFD's which provides a detailed view of the processes, data flow and data stores in the system. This level is used for complex system, where one high level of detailed is required to understand the system, each process on the Level Three DFD is depicted with a detailed description of its input, processing and output.</p>
         <p><strong>Example: Make a DFD for railway reservation.</strong></p>
+        <img src="se/DFD-levels/level-one.jpg" loading="lazy" alt="level-one-dfd">
+        <img src="se/DFD-levels/level-two.jpg" loading="lazy" alt="level-two-dfd">
+        <img src="se/DFD-levels/level-three.jpg" loading="lazy" alt="level-three-dfd">
+        <h2 id="structured-design">Structured Design</h2>
+        <p>The aim of structured design is to transform the result of structured analysis (DFD Representation ) into a structure chart. Structured Design provides two methods to guide & transformation of a DFD into a structure chart- <br><strong>(i) Transform Analysis<br>(ii) Transaction Analysis</strong><br>Normally, one start with the level 1 DFD transform it into module representation using either the transform or the transaction Analysis and then proceed towards the lower level DFDs. At each level of transformation it is important to first determine whether the transform or transaction analysis is applicable to a particular DFD.</p>
+        <h3>Structure Chart</h3>
+        <p>A structure chart represents the software architecture, that is the various modules making up the system, the dependency and the parameters that are passed among the different modules. hence, the structure chart representation can be easily implemented using some programming language.</p>
+        <p>The basic building blocks which are used to design structure charts are the following- </p>
+        <ol type="1">
+            <li><strong>Rectangle Box: </strong>Represents a module</li>
+            <li><strong>Modules: </strong>Module invocation arrows- control is part on one module in the direction of the connecting arrow.</li>
+            <li><strong>Data Flow Arrow: </strong>Arrows are denoted with data name(named data passes from one module to another in the direction of the arrow).</li>
+            <li><strong>Library Modules: </strong>Represented by a rectangle with double edges.</li>
+            <li><strong>Selection: </strong>Represented by a diamond symbol.</li>
+            <li><strong>Repetition: </strong>Represented by a loop around the control flow arrow.</li>
+        </ol>
+
+        <h4>Structure Chart V/S Flow Chart</h4>
+        <p>We are all familiar with the flow chart representation of a program. Flow chart is a convenient technique to represent the flow of control in a program. A structure chart differs from a flow chart in three principle ways.</p>
+        <ol type="i">
+            <li>It is usually difficult to identify the different module of the software from its flowchart representation.</li>
+            <li>Data interchange among different modules is not represented in a flow chart.</li>
+            <li>Sequentially ordering task inherent in a flow chart is suppressed in a structure chart.</li>
+        </ol>
+
+        <h4>Transform Analysis</h4>
+        <p>Transform Analysis identifies the primary function components modules and the high level inputs and outputs.<br>The DFD in few types of parts-</p>
+        <ol type="1">
+            <li>Logical Processing</li>
+            <li>Output Processing</li>
+        </ol>
+        <p>The input portion of DFD includes processes that transform input data from physical (character from terminal ) to logical forms (internal table, list ). Each input portion is called an <strong>Afferent Branch</strong><br>The output portion of a DFD transform output data from logical to physical form. Each output portion is called <strong>efferent branch.</strong> The remaining portion of a DFD is called <strong>the central transform.</strong></p>
+
+        <h4 id="object-modeling-uml">Object-Modeling Using UML</h4>
+        <p><strong>(i) Model: </strong>A model captures aspects important for some application while of abstracting the rest. A model in the context of software development can be graphical, mathematical, textual or program code based. Models are very useful in documenting the design and analysis results. Graphical Models are very popular because they are easy to understand and construct. UML is primary tool of graphical modeling tool.</p>
+        <h4>Need For a Model</h4>
+        <p>An important reason behind constructing a model is that it helps manages complexity. Once models of a system have been constructed, these can be used for a variety of purpose during Software development including <strong>analysis, specification, code generation, design, visualize and understand the problem and the working of a system and testing.</strong></p>
+        <p>In all these application, the UML models can not only used to document the result but also to arive the result themselves.</p>
+
+        <h4>UML (Unified Modeling Language)</h4>
+        <p>As the name implies, is a modeling language. It may be used to visualize, specifies, construct, document artifacts of a software system. It provides a set of notations (examples, rectangles, lines, circles) to create a visual model of the system. Like any other language, UML has its own syntax, and symbols and sentence formation rules and semantics ( meanings of symbols and sentences ). UML is not the system design or development methodology but can be used to document. Object Oriented and Analysis results obtained using same methodology</p>
     </div>
     <div id="banner">
         <p><strong>Where to now?</strong></p>

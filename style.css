@@ -39,7 +39,7 @@ body {
 }
 #banner {
     position: relative; 
-    top: 120px; 
+    top: 100px; 
     max-width: 40%;
     margin: auto;
     height: auto;
@@ -48,15 +48,10 @@ body {
     background: white;
     border-radius: 10px;
 }
-
-@media (max-width: 768px) {
-    #banner {
-        max-width: 80%;
-        top: 50%;
-        transform: translateY(50%);
-    }
+.index-profile{
+    width: 100px;
+    border-radius: 50px;
 }
-
 a{
     text-decoration: none;
 }
@@ -73,4 +68,9 @@ hr {
     border: none; 
     height: 1px;  
     background-color: transparent;  
+}
+@media (max-width: 768px) {
+    #banner {
+        max-width: 80%;
+    }
 }
