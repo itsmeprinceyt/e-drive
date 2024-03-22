@@ -43,11 +43,13 @@
             <li><a href="#types_dbms">Types of Database Language</a></li>
             <li><a href="#dbms_model">Database Modeling Concept</a></li>
             <li><a href="#key">Key</a>
-                    <ul type="circle">
-                        <li><a href="#types_keys">Types of keys</a></li>
-                    </ul></li>
+            <li><a href="#types_keys">Types of keys</a></li>
             <li><a href="#sql">Structured Query Language &#40 SQL &#41</a></li>
             <li><a href="#er-diagram">E-R Diagram [ Entity Relationship ]</a></li>
+            <li><a href="#ER-Notation">E-R Notation</a></li>
+            <li><a href="#genera">Generalization</a></li>
+            <li><a href="#File-Organization">File Organization</a></li>
+            <li><a href="#Normalization">Normalization</a></li>
         </ul>
     </div>
     <div id="banner">
@@ -363,7 +365,7 @@
         <h3>Cardinality</h3>
         <p>Cardinality means how the entities are arranged to each other or what is the relationship structure between entities in a relationship set. In DBMS Cardinality represent number of that denotes how many times and entity is participating with another entity.</p>
 
-        <h3>Generalization</h3>
+        <h3 id="genera">Generalization</h3>
         <p>Generalization is the abstracting process of view set of objects as a single general class by concentrating of characteristics of lower level entities while ignoring there is different.<br>Generalization is a relationship that exist between a high level entity set and one or more level entity set. This represent a relationship.</p>
         <p><strong>Example: </strong></p>
         <img src="dbms/Generalization.jpg">
@@ -836,6 +838,123 @@
             <tr>
                 <td>3</td>
                 <td>Lucknow</td>
+            </tr>
+        </table>
+        <br>
+        <table class="small-table">
+            <tr>
+                <td><strong>E-Dept</strong></td>
+                <td><strong>E-Dept Type</strong></td>
+                <td><strong>Dept No</strong></td>
+            </tr>
+            <tr>
+                <td>Designing</td>
+                <td>D394</td>
+                <td>283</td>
+            </tr>
+            <tr>
+                <td>Testing</td>
+                <td>D394</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Stores</td>
+                <td>D283</td>
+                <td>232</td>
+            </tr>
+            <tr>
+                <td>Developer</td>
+                <td>D283</td>
+                <td>549</td>
+            </tr>
+        </table>
+        <h4>Fourth-Normal Form (4-NF)</h4>
+        <p>If it is in B.C.N.F and has no multi value dependency. For a dependency ( A -> B ) is for a single value of A, multiple value of B exists than the relational will be of a multi value dependency.</p>
+        <table class="small-table">
+            <tr>
+                <td><strong>S-ID</strong></td>
+                <td><strong>Course</strong></td>
+                <td><strong>Hobby</strong></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Computer</td>
+                <td>Dancing</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Maths</td>
+                <td>Singing</td>
+            </tr>
+            <tr>
+                <td>34</td>
+                <td>Chemistry</td>
+                <td>Dancing</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Biology</td>
+                <td>Cricket</td>
+            </tr>
+            <tr>
+                <td>59</td>
+                <td>Physics</td>
+                <td>Hockey</td>
+            </tr>
+        </table>
+        <p>The given student table is in 3-NF but the course and hobby are two independent entity. There is no relationship course and hobby.</p>
+        <p>A student has 11 ID contains two course Computer and Maths and two hobbies Dancing and Singing. So there is no multi value dependency.</p>
+        <table class="small-table">
+            <tr>
+                <td><strong>S-ID</strong></td>
+                <td><strong>Course</strong></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Computer</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Maths</td>
+            </tr>
+            <tr>
+                <td>34</td>
+                <td>Chemistry</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Biology</td>
+            </tr>
+            <tr>
+                <td>59</td>
+                <td>Physics</td>
+            </tr>
+        </table>
+        <br>
+        <table class="small-table">
+            <tr>
+                <td><strong>S-ID</strong></td>
+                <td><strong>Hobby</strong></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Dancing</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Singing</td>
+            </tr>
+            <tr>
+                <td>34</td>
+                <td>Dancing</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Cricket</td>
+            </tr>
+            <tr>
+                <td>59</td>
+                <td>Hockey</td>
             </tr>
         </table>
     </div>
