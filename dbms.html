@@ -583,6 +583,261 @@
             </tr>
         </table>
         <p><strong>Exercise: </strong></p>
+        <table class="small-table">
+            <tr>
+                <td><strong>Item</strong></td>
+                <td><strong>Color</strong></td>
+                <td><strong>Price</strong></td>
+            </tr>
+            <tr>
+                <td>T-Shirt</td>
+                <td>Red,blue</td>
+                <td>120</td>
+            </tr>
+            <tr>
+                <td>Tie</td>
+                <td>Green</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>Socks</td>
+                <td>Black, White</td>                
+                <td>45</td>
+            </tr>
+        </table>
+        <p>Items: T-shirt & socks have multiple attributes so we decomposed  the table-</p>
+        <table class="small-table">
+            <tr>
+                <td><strong>ID</strong></td>
+                <td><strong>Item</strong></td>
+                <td><strong>Price</strong></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>T-Shirt</td>
+                <td>120</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Tie</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Socks</td>             
+                <td>45</td>
+            </tr>
+        </table>
+        <br>
+        <table class="small-table">
+            <tr>
+                <td><strong>ID</strong></td>
+                <td><strong>Color</strong></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Red</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Blue</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Green</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Black</td>   
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>White</td>
+            </tr>
+        </table>
+
+        <h4>Third-Normal Form (3-NF)</h4>
+        <p>A relation will be in 3-NF if it is in 2-NF and not contain any transitive partial dependency. 3-NF is used to reduce the data duplication and there is no transitive dependency for non-prime attributes. Then the relation must be 3-NF.</p>
+
+        <table class="small-table">
+            <tr>
+                <td><strong>E-ID</strong></td>
+                <td><strong>E-Name</strong></td>
+                <td><strong>E-Zip</strong></td>
+                <td><strong>E-State</strong></td>
+                <td><strong>E-City</strong></td>
+            </tr>
+            <tr>
+                <td>E-1</td>
+                <td>A</td>
+                <td>101</td>
+                <td>U.P</td>
+                <td>Kanpur</td>
+            </tr>
+            <tr>
+                <td>E-2</td>
+                <td>B</td>
+                <td>102</td>
+                <td>M.P</td>
+                <td>Bhopal</td>
+            </tr>
+            <tr>
+                <td>E-2</td>
+                <td>B</td>
+                <td>103</td>
+                <td>H.P</td>
+                <td>Shimla</td>
+            </tr>
+            <tr>
+                <td>E-4</td>
+                <td>D</td>
+                <td>104</td>
+                <td>U.K</td>
+                <td>Dehradun</td>
+            </tr>
+        </table>
+        <p>In this table, city depend on state and state depends on zip. So we will decompose the table into- </p>
+        <table class="small-table">
+            <tr>
+                <td><strong>E-ID</strong></td>
+                <td><strong>E-Name</strong></td>
+                <td><strong>E-Zip</strong></td>
+            </tr>
+            <tr>
+                <td>E-1</td>
+                <td>A</td>
+                <td>101</td>
+            </tr>
+            <tr>
+                <td>E-2</td>
+                <td>B</td>
+                <td>102</td>
+            </tr>
+            <tr>
+                <td>E-3</td>
+                <td>C</td>
+                <td>204</td>
+            </tr>
+            <tr>
+                <td>E-4</td>
+                <td>D</td>
+                <td>300</td>
+            </tr>
+        </table>
+        <br>
+        <table class="small-table">
+            <tr>
+                <td><strong>E-Zip</strong></td>
+                <td><strong>E-State</strong></td>
+                <td><strong>E-City</strong></td>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>U.P</td>
+                <td>Kanpur</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>M.P</td>
+                <td>Bhopal</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>H.P</td>
+                <td>Shimla</td>
+            </tr>
+            <tr>
+                <td>104</td>
+                <td>U.K</td>
+                <td>Dehradun</td>
+            </tr>
+        </table>
+        <h4>Boyce-Codd Normal Form (BC-NF)</h4>
+        <p>BCNF is the advanced version of 3-NF. It is strict than 3-NF. A table is in B.C.N.F if every functional dependency is the super key of the table. For B.C.N.F, the table should be in 3-NF and for every functional dependency L.H.S is super key.</p>
+        <p>Let's assume there is a company where employees work in more than one department.</p>
+        <table class="small-table">
+            <tr>
+                <td><strong>E-ID</strong></td>
+                <td><strong>E-City</strong></td>
+                <td><strong>E-Dept</strong></td>
+                <td><strong>E-Dept Type</strong></td>
+                <td><strong>Dept. No</strong></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Kanpur</td>
+                <td>Designing</td>
+                <td>D394</td>
+                <td>283</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Kanpur</td>
+                <td>Testing</td>
+                <td>D394</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Lucknow</td>
+                <td>Stores</td>
+                <td>D283</td>
+                <td>232</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Lucknow</td>
+                <td>Developer</td>
+                <td>D283</td>
+                <td>549</td>
+            </tr>
+        </table>
+        <p>The table is not in B.C.N.F because neither E-Dept nor E-ID along are keys. So we decompose into three table.</p>
+        <table class="small-table">
+            <tr>
+                <td><strong>E-ID</strong></td>
+                <td><strong>E-City</strong></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Kanpur</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Kanpur</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Lucknow</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Lucknow</td>
+            </tr>
+        </table>
+        <br>
+        <table class="small-table">
+            <tr>
+                <td><strong>E-ID</strong></td>
+                <td><strong>E-Dept</strong></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Kanpur</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Kanpur</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Lucknow</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Lucknow</td>
+            </tr>
+        </table>
     </div>
     <div id="banner">
         <p><strong>Where to now?</strong></p>
