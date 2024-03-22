@@ -41,17 +41,32 @@
             <li><a href="#unit1">UNIT - I</a></li>
                 <ul>
                     <li><a href="#adcg">Advantages of Computer Graphics</a></li>
+                    <li><a href="#gui">GUI</a></li>
+                    <li><a href="#conceptual-framework">Conceptual Framework for Interactive Graphics</a></li>
                 </ul>
             <li><a href="#unit2">UNIT - II</a></li>
+                <ul>
+                    <li><a href="#scan-converting-lines">Scan Converting Lines</a></li>
+                    <li><a href="#scan-converting-circles">Scan Converting Circles</a></li>
+                    <li><a href="#scan-converting-eclipse">Scan Converting Eclipse</a></li>
+                    <li><a href="#scan-conversion-of-line">Scan Conversion of Line</a></li>
+                    <li><a href="#polygon-clipping">Polygon Clipping</a></li>
+                </ul>
+            <li><a href="#unit3">UNIT - III</a></li>
         </ul>
     </div>
     <div id="banner">
         <h1 id="unit1">UNIT - I</h1>
         <h2>Computer Graphics</h2>
         <p>Computer Graphics is an art/presentation on visual/relevant display unit of images,pictures , animations with the help of computer program.</p>
-        
+        <p>(a) Computer Graphics refers to the creation, storage and manipulation.</p>
+        <p>(b) Such as images, education, entertainment, videos, etc. Every image or picture is in fact a graph with different mathematical tricks are used to manipulate some changes in its properties like shape, size, etc.</p>
+        <p>(c) Computer Graphics is an art of drawing, pictures, lines, charts, etc.</p>
+        <p>(d) In computer graphics can be created as 2 or 3 dimensional images.</p>
+        <h4>Some Jargons</h4>
+        <p><strong>Pixel: </strong>Pixel is a small unit of a picture displayed on a computer screen</p>
+        <p>Multimedia means that computer information can be represented as the videos, animation, drawing, images.</p>
         <img src="cg/program1.png" loading="lazy"alt="Basic Syntax of CG">
-
         <p style="font-weight: bold;">gd : graphic driver <br>pixel : Picture Element &#40 It is the smallest unit of display &#41<br>PPI : Pixel per inch<br>Vector : Mathematical Formula<br>Raster : Pixel</p>
 
         <img src="cg/program2.png" loading="lazy" alt="First Program of CG">
@@ -75,17 +90,18 @@
             <li>Healthcare</li>
             <li>GUI</li>
         </ol>
-        <h6>GUI</h4><p>Most applications that run or present computer and work station and even those that run on terminals attached to time shared computers and network computer server have users interface they rely on desktop windows system to manage multiple simultaneous activities and on point and click facilities to allow users to select menu items, icons at objects on the screen typing is necessary only to input text to be stored and manipulated.</p>
+        <h6 id="gui">GUI</h4><p>Most applications that run or present computer and work station and even those that run on terminals attached to time shared computers and network computer server have users interface they rely on desktop windows system to manage multiple simultaneous activities and on point and click facilities to allow users to select menu items, icons at objects on the screen typing is necessary only to input text to be stored and manipulated.</p>
 
         <p><strong>Example: </strong>Word processing, spreadsheet &#40 Excel &#41 and desktop publishing &#40 DTP &#41</p>
 
-        <h6>Interactive Plotting</h6><p>Used in business science technology!</p>
+        <h6>Interactive Plotting</h6>
+        <p>Used in business science technology!</p>
         
         <h6>Detailing</h6><p>The next most common use of graphics is to create 2D and 3D graphics or mathematical, physical, economic functions, bar and pie chart, inventory and production chart, all these are used to present meaningful and concised data. The trends and patterns from the data so as to clarify complex phenomena and to facilitate and inform decision making.</p>
     
         <h4>CG</h4>
         <p>Most computer graphics can also be drawn but the computer can accomplish much more in a much short time. One of of the major benefits of computer graphics is that images can be manipulated relatively easy and that a multitude of visual effects are possible because the images can be played over and over again until the desired effect is achieved.</p>
-        <h4>Conceptual Framework for Interactive Graphics</h4>
+        <h4 id="conceptual-framework">Conceptual Framework for Interactive Graphics</h4>
         <p>It is a foundational structure of a set of principle that guides you to design, a creation and utilization of interactive graphics.<strong>Framework</strong> is a layered structure what kind of program should be build.</p>
         <img src="cg/Conceptual Framework.jpg" loading="lazy" alt="CF">
         <img src="cg/Conceptual Framework2.jpg" loading="lazy" alt="CF2">
@@ -96,7 +112,6 @@
             <li>Interactive plotting in business science & technology</li>
             <li>Art & Commerce</li>
         </ol>
-
         <h4>Classification of Application Development of Hardware and Software for Computer Graphics</h4>
         <p><strong>Software: </strong>There are two components-</p>
         <p><strong>(a) Adobe Photoshop (Roster Graphics): </strong>In this, Adobe Photoshop images, we click on cameras and real images which can made up of pixels.</p>
@@ -133,7 +148,7 @@
         <p><strong>(b) Line Clipping: </strong>In this line clipping deals with determining the visibility of line segment. Some of various algorithms like these are used to clip lines.<br>(i) Cohen Sutherland Algorithm<br>(ii) Liang-Bansky Algorithm </p>
         <img src="cg/line-clipping.jpg" loading="lazy" alt="Line Clipping">
 
-        <h3>Scan Converting Lines</h3>
+        <h3 id="scan-converting-lines">Scan Converting Lines</h3>
         <p>In this scan converting lines, involves the process of representing a straight line on a pixel, determining which pixel to turn on approximate. It enables the efficient and accurate(the line) representation of straight lines on the screen.</p>
 
         <h4>Some of the Key Steps</h4>
@@ -142,7 +157,7 @@
         <img src="cg/slope-calculation.jpg" loading="lazy"alt="Slope Calculation">
         <p><strong>(iii) Determination of pixel position: </strong>In this, we determine the pixel position which pixel should be represent accurately.</p>
 
-        <h3>Scan Converting Circles</h3>
+        <h3 id="scan-converting-circles">Scan Converting Circles</h3>
         <p>It is process of representing circle on a pixel determining which pixel to turn on to approximate in circular shape.</p>
         <img src="cg/ScanConvertingCircle.jpg" loading="lazy"alt="Scan-Converting-Circle">
         <p><strong>(i) Circle and Radius: </strong>Define the center with coordinates of (h,k). h(horizontal (x-axis),vertical(y0axis)) and specify the radius 'r','h' represents 'x-axis' or coordinates of center of a circle and 'k' represents 'y-axis' or coordinates of center of a circle.</p>
@@ -150,7 +165,7 @@
         <p><strong>(iii) Updating pixel position: </strong>In this we have to update decision parameter and move to the next pixel position based on algorithm.
         <p><strong>(iv) Decision Parameter: </strong>Decision parameter is used for evaluate which pixel should be turn on next common method including mid point circle algorithm.</p>
         
-        <h3>Scan Converting Ellipse</h3>
+        <h3 id="scan-converting-eclipse">Scan Converting Ellipse</h3>
         <p>It is process of determining which pixel to activate in order to approximate shape of ellipse on a pixel.</p>
         <img src="cg/ScanConvertingEllipse.jpg" loading="lazy" alt="Scan-Converting-Ellipse">
         <p><strong>(i) Centre of Ellipse: </strong>Define the centre of ellipse with point (h,k) and specify the length of semi-measure axis (a) and semi-measure axis (b).</p>
@@ -158,7 +173,7 @@
         <p><strong>(iii) Plotting</strong></p>
         <p><strong>(iv) Decision Parameter</strong></p>
 
-        <h3>Scan Conversion of a Line</h3>
+        <h3 id="scan-conversion-of-line">Scan Conversion of a Line</h3>
         <p>A straight line may be defined by two end points.</p>
         <img src="cg/ScanConversionOfALine1.jpg" loading="lazy"alt="Line">
         <img src="cg/ScanConversionOfALine.jpg"  loading="lazy"alt="Line2">
@@ -170,6 +185,60 @@
         <p><strong>(vi) Clipping Window: </strong>Determining what position of the object will be visible and what part will be clipped or discarded.</p>
         <p><strong>(vii) View Port: </strong>In this process, objects are outside the clipping window considered as invisible.</p>
         <img src="cg/viewPort.jpg" loading="lazy" alt="View-Port">
+
+        <h3 id="polygon-clipping">Polygon Clipping (Sutherland-Hodgemann)</h3>
+        <ol type="1">
+            <li>Read the coordinates of vertices of a polygon.</li>
+            <li>Read the coordinates of a clipping window.</li>
+            <li>Consider the left edge of the window.</li>
+            <li>Shape resulting intersection and vertices according to the rule.</li>
+            <li>Repeat for the clipping of the top, right, bottom.</li>
+            <li>Each time pass resulting list of vertices to the next edge of clipping window.</li>
+            <li>Stop.</li>
+        </ol>
+        <h4>Rules for clipping the polygon edges-</h4>
+        <img src="cg/polygon-clipping.jpg" loading="lazy" alt="Polygon-Clipping">
+        <h4>Example</h4>
+        <img src="cg/polygon-clipping-example.jpg" loading="lazy" alt="Polygon-Clipping-Example">
+        <table class="small-table">
+            <tr>
+                <td><strong>Vertex</strong></td>
+                <td><strong>Rule</strong></td>
+                <td><strong>Output</strong></td>
+            </tr>
+            <tr>
+                <td>AB</td>
+                <td>in-in</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>BC</td>
+                <td>in-in</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>CD</td>
+                <td>in-in</td>
+                <td>D</td>
+            </tr>
+            <tr>
+                <td>DE</td>
+                <td>in-out</td>
+                <td>P</td>
+            </tr>
+            <tr>
+                <td>EA</td>
+                <td>out-in</td>
+                <td>Q A</td>
+            </tr>
+        </table>
+        <h1 id="unit3">UNIT - III (Geometrical Transformation 2D)</h1>
+        <h2 id="transformation">Transformation</h2>
+        <p>In this, transformation process are the operations like position, size, shape of an object within graphical scene.<br>There are two types of transformation-<br>(a) 2D Transformation<br>(b) 3D Transformation</p>
+        <p>Transformation is used to modifying the shapes, object and images in computer graphics.</p>
+        <img src="cg/unit-3rd/TransformationIn2D.jpg" loading="lazy" alt="Transformation in 2D">
+        <h3>Translation</h3>
+        <p>It is an object along straight line path from one coordinate location to another.</p>
     </div>
     <div id="banner">
         <p><strong>Where to now?</strong></p>

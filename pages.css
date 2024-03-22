@@ -78,7 +78,9 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
-
+.small-table{
+    width: 50%;
+}
 th, td {
     border: 1px solid #000000; 
     padding: 8px; 
@@ -98,5 +100,8 @@ img{
         width: 100%;
         max-width: 100%;
         height: auto;
+    }
+    .small-table{
+        width: 100%;
     }
 }
