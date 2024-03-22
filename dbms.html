@@ -38,23 +38,20 @@
     <div id="banner">
         <h4>Index</h4>
         <ul>
-            <li><a href="#unit1">UNIT - I</a></li>
-                <ul>
-                    <li><a href="#dbms">DBMS Architecture</a></li>
-                    <li><a href="#types_dbms">Types of Database Language</a></li>
-                    <li><a href="#dbms_model">Database Modeling Concept</a></li>
-                    <li><a href="#key">Key</a>
-                            <ul type="disc">
-                                <li><a href="#types_keys">Types of keys</a></li>
-                            </ul></li>
-                    <li><a href="#sql">Structured Query Language &#40 SQL &#41</a></li>
-                    <li><a href="#er-diagram">E-R Diagram [ Entity Relationship ]</a></li>
-                </ul>
+            <li><a href="#DataBase">Database Management System</a></li>
+            <li><a href="#dbms">DBMS Architecture</a></li>
+            <li><a href="#types_dbms">Types of Database Language</a></li>
+            <li><a href="#dbms_model">Database Modeling Concept</a></li>
+            <li><a href="#key">Key</a>
+                    <ul type="circle">
+                        <li><a href="#types_keys">Types of keys</a></li>
+                    </ul></li>
+            <li><a href="#sql">Structured Query Language &#40 SQL &#41</a></li>
+            <li><a href="#er-diagram">E-R Diagram [ Entity Relationship ]</a></li>
         </ul>
     </div>
     <div id="banner">
-        <h1 id="unit1">UNIT - I</h1>
-        <h2>Database Management System</h2>
+        <h1 id="DataBase">Database Management System</h1>
         <p><strong>Database: </strong>Database is a collection of related information in a systematic manner.</p>
         <p><strong>Example: </strong>A row of a list of roll number and name of a particular class.</p>
         <p>A database is a general term for any useful collection of logically data whereas DBMS is a computer for a software specially design to maintain database.</p>
@@ -349,6 +346,243 @@
         <img src="dbms/e-r/many to many.jpg" alt="er-many-many">
         <h3>Weak Entity</h3>
         <p>An entity set that doesn't processes sufficient attributes to form a primary key is called a <strong>weak entity set.</strong> A weak entity can't exit by itself & it depends on and identify entity set via an identified relationship set. An identified relationship is using a double diamond and a weak entity set is used to represent as double rectangle.</p>
+        <img src="dbms/weak-entity.jpg">
+
+        <h2 id="ER-Notation">E-R Notation</h2>
+        <p>Database can be represented using the notation. <strong>Peter Chen</strong> or <strong>Bachman</strong> are the name inventor of the notation.</p>
+        <p><strong>Draw E-R Diagram of Online Shopping</strong></p>
+        <img src="dbms/Er-Notation.jpg">
+        <img src="dbms/Er-Notation-Symbols.jpg">
+        <p><strong>Example: </strong></p>
+        <img src="dbms/ER-Notation-Example.jpg">
+        <p><strong>Example: </strong></p>
+        <img src="dbms/ER-Notation-Example2.jpg">
+        <p><strong>Draw the E-R Diagram for Library</strong></p>
+        <img src="dbms/ER-Notation-Example3.jpg">
+        
+        <h3>Cardinality</h3>
+        <p>Cardinality means how the entities are arranged to each other or what is the relationship structure between entities in a relationship set. In DBMS Cardinality represent number of that denotes how many times and entity is participating with another entity.</p>
+
+        <h3>Generalization</h3>
+        <p>Generalization is the abstracting process of view set of objects as a single general class by concentrating of characteristics of lower level entities while ignoring there is different.<br>Generalization is a relationship that exist between a high level entity set and one or more level entity set. This represent a relationship.</p>
+        <p><strong>Example: </strong></p>
+        <img src="dbms/Generalization.jpg">
+
+        <h2 id="File-Organization">File Organization</h2>
+        <p>File organization source that how data is arranged together in the secondary storage device like magnetic disc. The technique used to represent or the records of a files is called <strong>file organization.</strong><br>File organization is a logical relationship among various of records, this method define how file records are map onto disc block.</p>
+        <h3>Type of File Organization</h3>
+        <ol type="1">
+            <li>Sequential File Organization</li>
+            <li>Heap File Organization</li>
+            <li>Hash File Organization</li>
+            <li>B+ File Organization</li>
+            <li>Indexed Sequential axis Method (ISAM)</li>
+            <li>Cluster File Organization</li>
+        </ol>
+        <h4>Sequential File Organization</h4>
+        <p>This method is the method of the file organization. In this method files are stored sequentially. This method can be implemented into this file are: <br>1. Pile File<br>2. Sorted File</p>
+
+        <h5>Pile File Method</h5>
+        <p>In this method records a placed one after another as they arrive.</p>
+        <p><strong>Example:</strong></p>
+        <img src="dbms/Pile-File.jpg">
+        <img src="dbms/Pile-File2.jpg">
+
+        <h5>Sorted File Method</h5>
+        <p>In this method this records is store in the end of file and then it will be sort the sequence ascending and descending order.</p>
+        <img src="dbms/SortedFileMethod.jpg">
+
+        <h4>Heap File Organization</h4>
+        <p>It is the simplest and most basic type of organization it works with data blocks and the records are inserted at the file ends. The starting is not require in the heap file organization when the blocks if full, the new records is stored in some other block. Every records has a unique ID and every page file is same size.</p>
+
+        <h4>B+ File Organization</h4>
+        <p>B+ file organization is the advance method of an sequential access method it uses a tree like structure to store record in file. It uses the same concept of key index where the primary key is used to sort the records. The basic B+ tree structure was discovered by <strong>R.Bayer</strong> and <strong>Edward M. McCreight</strong> of going scientific research lab and has grown to become on of the most popular techniques for organizing and index structure.</p>
+
+        <h4>Hash File Organization</h4>
+        <p>Hash file organization, also known as direct file organization, is a technique that uses a hash function to map record keys to specific data blocks in memory.</p>
+        <p>or</p>
+        <p>It is used the computation of Hash function on some field of the records, the Hash function output determine the location of disc block where the records are to be placed.</p>
+
+
+        <h2 id="Normalization">Normalization</h2>
+        <ul>
+            <li>Normalization is the process of organizing the data in the database.</li>
+            <li>Normalization is used to minimize the redundancy from a relation from a set of relation. It is used to eliminate undesirable characteristics like insertion, update.</li>
+            <li>Normalization divides the larger table into smaller and links them using relationship.</li>
+            <li>Normalization is a process of decomposing a relation, having a dependency among its attributes includes simpler relation that are free from anomalies. Such that the decomposition original set of records always be brought back the join of smaller decompose relation.</li>
+        </ul>
+
+        <h3>Why Normalization?</h3>
+        <p>The main reason for normalization, the relation is removing the anomalies. <strong>( Irregularities or inconsistent that occur in a database disturbing the normal database ) Anomalies can be categorized into three types: </strong></p>
+        <ol type="1">
+            <li><strong>Insertion Anomalies: </strong>Insertion Anomalies refers to when one cannot insert a new couple into a relationship due to lack of data.</li>
+            <li><strong>Deletion Anomalies: </strong>Deletion Anomalies refers to the situation where the deletion of data result in the unintended loss of some other important data.</li>
+            <li><strong>Updation  Anomalies: </strong>Update Anomalies is when an update of the single data values requires multiple rows of data to be updated.`</li>
+        </ol>
+        
+        <h3>Advantages of Normalization</h3>
+        <ol type="a">
+            <li>It helps to minimize data redundancy.</li>
+            <li>Greater overall database organization.</li>
+            <li>Data consistency within the database.</li>
+            <li>Much more flexible database design.</li>
+            <li>Enforce the concept of relation integrity.</li>
+        </ol>
+
+        <h3>Disadvantages of Normalization</h3>
+        <ol type="a">
+            <li>You cannot start building the database before knowing what the user need.</li>
+            <li>The performance degrade when normalizing the relation to higher normal forms.</li>
+            <li>Very time consuming and difficult to normalize relation of a higher degree.</li>
+        </ol>
+
+        <h3>Types of Normalization</h3>
+
+        <h4>1. First-Normal Form (1-NF)</h4>
+        <p>A relation will be 1-NF if it contains an atomic value. It states that an attributes of a table cannot hold multiple values. It must hold only single value attributes.</p>
+        <p><strong>Example: </strong></p>
+        <table class="small-table">
+            <tr>
+                <td><strong>E-ID</strong></td>
+                <td><strong>E-Name</strong></td>
+                <td><strong>E-Phone</strong></td>
+            </tr>
+            <tr>
+                <td>E-1</td>
+                <td>Ram</td>
+                <td>47,68</td>
+            </tr>
+            <tr>
+                <td>E-2</td>
+                <td>Nidhi</td>
+                <td>10,24</td>
+            </tr>
+            <tr>
+                <td>E-3</td>
+                <td>Syam</td>
+                <td>93,21</td>
+            </tr>
+        </table>
+        <p><strong>All the values have multiple value attribute so we decompose the table</strong></p>
+        <table class="small-table">
+            <tr>
+                <td><strong>E-ID</strong></td>
+                <td><strong>E-Name</strong></td>
+                <td><strong>E-Phone</strong></td>
+            </tr>
+            <tr>
+                <td>E-1</td>
+                <td>Ram</td>
+                <td>47</td>
+            </tr>
+            <tr>
+                <td>E-1</td>
+                <td>Ram</td>
+                <td>68</td>
+            </tr>
+            <tr>
+                <td>E-2</td>
+                <td>Nidhi</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>E-2</td>
+                <td>Nidhi</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>E-3</td>
+                <td>Syam</td>
+                <td>93</td>
+            </tr>
+            <tr>
+                <td>E-3</td>
+                <td>Syam</td>
+                <td>21</td>
+            </tr>
+        </table>
+
+        <h4>2. Second-Normal Form (2-NF)</h4>
+        <p>In the second normal form, the relation must be in 1-NF. The all non-key attributes are fully functional dependent on the primary key. For example, lets assume a school can store the data of teachers and the subjects they teach. In a school, teacher can teach more than one subject.</p>
+        <table class="small-table">
+            <tr>
+                <td><strong>ID</strong></td>
+                <td><strong>Subject</strong></td>
+                <td><strong>Age</strong></td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>Chemistry</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>Biology</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>47</td>
+                <td>English</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>83</td>
+                <td>Math</td>
+                <td>38</td>
+            </tr>
+            <tr>
+                <td>83</td>
+                <td>Computer</td>
+                <td>38</td>
+            </tr>
+        </table>
+        <p>In this given table, non-prime attributes teacher's age is depend on teacher's ID. That's why its violates the rule for second NF ( 2-NF ).</p>
+        <table class="small-table">
+            <tr>
+                <td><strong>T-ID</strong></td>
+                <td><strong>T-Subject</strong></td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>Chemistry</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>Biology</td>
+            </tr>
+            <tr>
+                <td>47</td>
+                <td>English</td>
+            </tr>
+            <tr>
+                <td>83</td>
+                <td>Math</td>
+            </tr>
+            <tr>
+                <td>83</td>
+                <td>Computer</td>
+            </tr>
+        </table>
+        <br>
+        <table class="small-table">
+            <tr>
+                <td><strong>T-ID</strong></td>
+                <td><strong>T-Age</strong></td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>47</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>83</td>
+                <td>38</td>
+            </tr>
+        </table>
+        <p><strong>Exercise: </strong></p>
     </div>
     <div id="banner">
         <p><strong>Where to now?</strong></p>
