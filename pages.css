@@ -94,6 +94,9 @@ img{
     width: 50%;
     max-width: 50%;
 }
+math{
+    display:"inline-block";
+}
 @media (max-width: 768px)
 {
     img{
