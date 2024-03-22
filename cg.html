@@ -53,6 +53,15 @@
                     <li><a href="#polygon-clipping">Polygon Clipping</a></li>
                 </ul>
             <li><a href="#unit3">UNIT - III</a></li>
+                <ul>
+                    <li><a href="#transformation">Transformation</a>
+                        <ul type="disc">
+                            <li><a href="#translation">Translation</a></li>
+                            <li><a href="#reflection">Reflection</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
         </ul>
     </div>
     <div id="banner">
@@ -198,8 +207,8 @@
         </ol>
         <h4>Rules for clipping the polygon edges-</h4>
         <img src="cg/polygon-clipping.jpg" alt="Polygon-Clipping">
-        <h4>Example</h4>
-        <img src="cg/polygon-clipping-example.jpg" alt="Polygon-Clipping-Example">
+        <h4>Clipping against left side-</h4>
+        <img src="cg/polygon-clipping-example-left.jpg" alt="Polygon-Clipping-Example">
         <table class="small-table">
             <tr>
                 <td><strong>Vertex</strong></td>
@@ -232,12 +241,145 @@
                 <td>Q A</td>
             </tr>
         </table>
+        <h4>Clipping against Right side-</h4>
+        <img src="cg/polygon-clipping-example -right.jpg" alt="Polygon-Clipping-Example">
+        <table class="small-table">
+            <tr>
+                <td><strong>Vertex</strong></td>
+                <td><strong>Rule</strong></td>
+                <td><strong>Output</strong></td>
+            </tr>
+            <tr>
+                <td>AB</td>
+                <td>in-out</td>
+                <td>Q'</td>
+            </tr>
+            <tr>
+                <td>BC</td>
+                <td>out-in</td>
+                <td>Q2 C</td>
+            </tr>
+            <tr>
+                <td>CD</td>
+                <td>in-in</td>
+                <td>D</td>
+            </tr>
+            <tr>
+                <td>DD'</td>
+                <td>in-in</td>
+                <td>D'</td>
+            </tr>
+            <tr>
+                <td>E'D'</td>
+                <td>in-in</td>
+                <td>E'</td>
+            </tr>
+            <tr>
+                <td>E'A</td>
+                <td>in-in</td>
+                <td>A</td>
+            </tr>
+        </table>
+        <h4>Clipping against Bottom side-</h4>
+        <img src="cg/polygon-clipping-example - bottom.jpg" alt="Polygon-Clipping-Example">
+        <table class="small-table">
+            <tr>
+                <td><strong>Vertex</strong></td>
+                <td><strong>Rule</strong></td>
+                <td><strong>Output</strong></td>
+            </tr>
+            <tr>
+                <td>AA'</td>
+                <td>in-in</td>
+                <td>A'</td>
+            </tr>
+            <tr>
+                <td>A'B'</td>
+                <td>in-in</td>
+                <td>B'</td>
+            </tr>
+            <tr>
+                <td>B'C</td>
+                <td>in-in</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>CD</td>
+                <td>in-out</td>
+                <td>P</td>
+            </tr>
+            <tr>
+                <td>DD'</td>
+                <td>out-in</td>
+                <td>Q D'</td>
+            </tr>
+            <tr>
+                <td>D'E'</td>
+                <td>in-in</td>
+                <td>E'</td>
+            </tr>
+            <tr>
+                <td>E'A</td>
+                <td>in-in</td>
+                <td>A</td>
+            </tr>
+        </table>
+        <h4>Clipping against Top side-</h4>
+        <img src="cg/polygon-clipping-example - top.jpg" alt="Polygon-Clipping-Example">
+        <table class="small-table">
+            <tr>
+                <td><strong>Vertex</strong></td>
+                <td><strong>Rule</strong></td>
+                <td><strong>Output</strong></td>
+            </tr>
+            <tr>
+                <td>AB'</td>
+                <td>out-in</td>
+                <td>R A'</td>
+            </tr>
+            <tr>
+                <td>A'B'</td>
+                <td>in-in</td>
+                <td>B'</td>
+            </tr>
+            <tr>
+                <td>B'C</td>
+                <td>in-in</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>CP</td>
+                <td>in-in</td>
+                <td>P</td>
+            </tr>
+            <tr>
+                <td>PQ</td>
+                <td>in-in</td>
+                <td>Q</td>
+            </tr>
+            <tr>
+                <td>QD'</td>
+                <td>in-in</td>
+                <td>D'</td>
+            </tr>
+            <tr>
+                <td>D'E'</td>
+                <td>in-in</td>
+                <td>E'</td>
+            </tr>
+            <tr>
+                <td>E'A</td>
+                <td>in-out</td>
+                <td>S</td>
+            </tr>
+        </table>
         <h1 id="unit3">UNIT - III (Geometrical Transformation 2D)</h1>
         <h2 id="transformation">Transformation</h2>
         <p>In this, transformation process are the operations like position, size, shape of an object within graphical scene.<br>There are two types of transformation-<br>(a) 2D Transformation<br>(b) 3D Transformation</p>
         <p>Transformation is used to modifying the shapes, object and images in computer graphics.</p>
         <img src="cg/unit-3rd/TransformationIn2D.jpg" alt="Transformation in 2D">
-        <h3>Translation</h3>
+
+        <h3 id="translation">Translation</h3>
         <p>It is an object along straight line path from one coordinate location to another.</p>
         <img src="cg/unit-3rd/Translation.jpg">
         <p><strong>To find original coordinates / new coordinates: </strong></p>
@@ -513,7 +655,8 @@
         </math>
         <p>C' = (10,11) <strong> [ New coordinates ]</strong></p>
         <img src="cg/unit-3rd/example-2.png">
-        <h3>Reflection</h3>
+
+        <h3 id="reflection">Reflection</h3>
         <p>It is a transformation which evaluates the mirror image of an object.<br>There are only two types-<br>(a) Reflection which respect to x-axis<br>(b) Reflection with respect to y-axis</p>
         <p>x' & y' are the new point coordinates of x and y axis.</p>
         <img src="cg/unit-3rd/reflection.png">
