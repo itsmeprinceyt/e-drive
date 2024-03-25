@@ -51,6 +51,33 @@ body {
     margin-bottom: 20px;
 }
 
+.onTop{
+    z-index: 100;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+.onTop button{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border: 1px none black;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+.onTop img{
+    width: 20px;
+}
+.hide
+{
+    opacity: 0;
+}
+.show{
+    opacity: 1;
+}
 a{
     text-decoration: none;
 }
@@ -106,5 +133,10 @@ math{
     }
     .small-table{
         width: 100%;
+    }
+    .onTop{
+        z-index: 100;
+        position: fixed;
+        left: 50%;
     }
 }
