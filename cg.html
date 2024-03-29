@@ -63,6 +63,9 @@
                         <ul type="disc">
                             <li><a href="#translation">Translation</a></li>
                             <li><a href="#reflection">Reflection</a></li>
+                            <li><a href="#Scaling">Scaling</a></li>
+                            <li><a href="#Rotation">Rotation</a></li>
+                            <li><a href="#Shearing">Shearing</a></li>
                         </ul>
                     </li>
                     
@@ -493,6 +496,7 @@
         <h4>Example</h4>
         <p><strong>A(2,2), B(8,2), C(5,5). Translate triangle with distance of tx=5, ty=6</strong></p>
         <img src="cg/unit-3rd/example-1.png">
+        <p style="text-decoration: underline;"><strong>Solution</strong></p>
         <p>A' = A + T</p>
         <p style="display: inline-block;">A'</p>
         <math>
@@ -669,9 +673,10 @@
         <p>P' : New Coordinates<br>P : Original Coordinates</p>
         <p><strong>Formula: </strong></p>
         <p>P' = Re(x) . P</p>
+        <p><strong>Matrix Representation: </strong></p>
         <math>
             <mrow>
-                <mo>(</mo>
+                <mo>[</mo>
                 <mtable>
                     <mtr>
                         <mtd><mn style="text-decoration: underline;">x'</mn></mtd>
@@ -680,7 +685,7 @@
                         <mtd><mn>y'</mn></mtd>
                     </mtr>
                 </mtable>
-                <mo>)</mo>
+                <mo>]</mo>
             </mrow>
         </math>
         <math>
@@ -704,7 +709,7 @@
         </math>
         <math>
             <mrow>
-                <mo>(</mo>
+                <mo>[</mo>
                 <mtable>
                     <mtr>
                         <mtd><mn>x</mn></mtd>
@@ -713,7 +718,7 @@
                         <mtd><mn>-y</mn></mtd>
                     </mtr>
                 </mtable>
-                <mo>)</mo>
+                <mo>]</mo>
             </mrow>
         </math>
         <p>P' = Re(x) . P</p>
@@ -769,6 +774,857 @@
             </mrow>
         </math>
         <p>P' = Re(y) . P</p>
+        <h4>Example</h4>
+        <p><strong>Reflection of the coordinates of an triangle ABC [A(3,4), B(6,4), C(4,8)] in respect to x-axis and y-axis.</strong></p>
+        <p style="text-decoration: underline;"><strong>Solution</strong></p>
+        <p><strong>For x-axis</strong></p>
+        <p><strong>A'</strong><br>x'=3<br>y'=-4<br>A(3,-4)</p>
+        <p><strong>B'</strong><br>x'=6<br>y'=-4<br>B(6,-4)</p>
+        <p><strong>C'</strong><br>x'=4<br>y'=-8<br>C(4,-8)</p>
+        <p><strong>For y-axis</strong></p>
+        <p><strong>A'</strong><br>x'=-3<br>y'=4<br>A(-3,4)</p>
+        <p><strong>B'</strong><br>x'=6<br>y'=4<br>B(-6,4)</p>
+        <p><strong>C'</strong><br>x'=4<br>y'=8<br>C(-4,8)</p>
+        <img src="cg/unit-3rd/reflection-example.png">
+
+        <h3 id="Scaling">Scaling</h3>
+        <p>Scaling is used for changing the size of an object. There are two scaling factors.<br>Sx = Scaling in x direction<br>Sy = Scaling in y direction.</p>
+        <p><strong>Matrix Representation: </strong></p>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>x'</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>y'</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>=</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>Sx</mn></mtd>
+                <mtd><mn>0</mn></mtd>
+                </mtr>
+                <mtr>
+                    <mtd><mn>0</mn></mtd>
+                    <mtd><mn>Sy</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>+</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>x</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>y</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <p>P' = S.P</p>
+        <p>There are three conditions: <strong><br>(s.f = Scaling Factor)</strong><br>
+        <strong>Condition 1: </strong>If (s.f) = 1 , object size will not be increased or decreased.<br>
+        <strong>Condition 2: </strong>If (s.f) > 1 , object size will be enlarged.<br>
+        <strong>Condition 3: </strong>If (s.f) < 1 , object size will be reduced.
+        </p>
+
+        <h4>Example</h4>
+        <p><strong>In a triangle there are three coordinates [A(2,1), B(5,1), C(4,4)]</strong>
+            <br>
+            <img src="cg/unit-3rd/Scaling-Example-1.png">
+            <br>
+            <strong>Three units in x direction and 2 units in y direction</strong>
+        </p>
+        <p style="text-decoration: underline;"><strong>Solution</strong></p>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>x'</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>y'</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>=</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>Sx</mn></mtd>
+                <mtd><mn>0</mn></mtd>
+                </mtr>
+                <mtr>
+                    <mtd><mn>0</mn></mtd>
+                    <mtd><mn>Sy</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>+</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>x</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>y</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <p><strong>A'</strong></p>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>x'</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>y'</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>=</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>3</mn></mtd>
+                <mtd><mn>0</mn></mtd>
+                </mtr>
+                <mtr>
+                    <mtd><mn>0</mn></mtd>
+                    <mtd><mn>2</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>+</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>2</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>1</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <p>A(6,2)</p>
+        <p><strong>B'</strong></p>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>x'</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>y'</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>=</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>3</mn></mtd>
+                <mtd><mn>0</mn></mtd>
+                </mtr>
+                <mtr>
+                    <mtd><mn>0</mn></mtd>
+                    <mtd><mn>2</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>+</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>5</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>1</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <p>B(15,2)</p>
+        <p><strong>C'</strong></p>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>x'</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>y'</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>=</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>3</mn></mtd>
+                <mtd><mn>0</mn></mtd>
+                </mtr>
+                <mtr>
+                    <mtd><mn>0</mn></mtd>
+                    <mtd><mn>2</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>+</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>4</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>4</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <p>C(12,8)</p>
+        <img src="cg/unit-3rd/Scaling-Example-2.png">
+
+        <h3 id="Rotation">Rotation</h3>
+        <p>In Rotation we have to rotate an object as in 90&deg; or 45&deg;, etc.<br>It is a process of changing an angle of an object. Rotation can be performed, clockwise and anti-clockwise.</p>
+
+        <h4>Example (for proving purpose only)</h4>
+        <p>Φ = phi<br>Θ = theta</p>
+        <p><strong>We are taking two coordinates, x and y. x= r cosΦ , y= r sinΦ are at a distance from origin to point p. Φ is an angle between x-axis and point p. Let coordinates of p(x,y) [p(x=r cosΦ, y=r sinΦ)].</strong></p>
+        <img style="width: 350px;"src="cg/unit-3rd/rotation-proving.png">
+        <p><strong>For x-axis</strong></p>
+        <p style="margin-bottom: 0;">x' = r cos ( Φ +Θ)<br>
+            x' = r [cosΦ . cosΘ - sinΦ . sinΘ]<br>
+            x' = rcosΦ . cosΘ - rsinΦ . sinΘ<br>
+            <strong>Put x = rcosΦ & y = rsinΦ</strong><br>
+        </p>
+        <p style="border: 1px solid black; display: inline-block; margin:0; padding: 2px;">x' = xcosΘ - ysinΘ</p>
+        <p><strong>For y-axis</strong></p>
+        <p style="margin-bottom: 0;">y' = r sin ( Φ +Θ)<br>
+            y' = r [sinΦ . cosΘ + cosΦ . sinΘ]<br>
+            y' = rsinΦ . cosΘ - rcosΦ . sinΘ<br>
+        </p>
+        <p style="border: 1px solid black; display: inline-block; margin:0; padding: 2px;">y' = ycosΘ - xsinΘ</p>
+
+        <p><strong>Formula</strong></p>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>x'</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>y'</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>=</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>cosΘ</mn></mtd>
+                <mtd><mn>- sinΘ</mn></mtd>
+                </mtr>
+                <mtr>
+                    <mtd><mn>sinΘ</mn></mtd>
+                    <mtd><mn>cosΘ</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>+</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>x</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>y</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <p>P' = R . P</p>
+
+        <h4>Example</h4>
+        <p><strong>A triangle is given and their coordinates are [A(2,2), B(8,2), C(5,5)] and it is located at an angle 90&deg; , here Θ = 90. Find new coordinates.</strong></p>
+        <p><strong>A'</strong></p>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>x'</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>y'</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>=</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>cosΘ</mn></mtd>
+                <mtd><mn>- sinΘ</mn></mtd>
+                </mtr>
+                <mtr>
+                    <mtd><mn>sinΘ</mn></mtd>
+                    <mtd><mn>cosΘ</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>+</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>2</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>2</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <p><strong>Given Θ = 90</strong></p>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>x'</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>y'</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>=</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>cos90</mn></mtd>
+                <mtd><mn>- sin90</mn></mtd>
+                </mtr>
+                <mtr>
+                    <mtd><mn>sin90</mn></mtd>
+                    <mtd><mn>cos90</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>+</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>2</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>2</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <br><br>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>x'</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>y'</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>=</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>0</mn></mtd>
+                <mtd><mn>-1</mn></mtd>
+                </mtr>
+                <mtr>
+                    <mtd><mn>1</mn></mtd>
+                    <mtd><mn>0</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>+</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>2</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>2</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <p>A(-2,2)</p>
+
+        <p><strong>B'</strong></p>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>x'</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>y'</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>=</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>cos90</mn></mtd>
+                <mtd><mn>- sin90</mn></mtd>
+                </mtr>
+                <mtr>
+                    <mtd><mn>sin90</mn></mtd>
+                    <mtd><mn>cos90</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>+</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>8</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>2</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <br><br>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>x'</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>y'</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>=</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>0</mn></mtd>
+                <mtd><mn>-1</mn></mtd>
+                </mtr>
+                <mtr>
+                    <mtd><mn>1</mn></mtd>
+                    <mtd><mn>0</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>+</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>8</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>2</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <p>B(-2,8)</p>
+
+        <p><strong>C'</strong></p>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>x'</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>y'</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>=</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>cos90</mn></mtd>
+                <mtd><mn>- sin90</mn></mtd>
+                </mtr>
+                <mtr>
+                    <mtd><mn>sin90</mn></mtd>
+                    <mtd><mn>cos90</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>+</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>5</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>5</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <br><br>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>x'</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>y'</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>=</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>0</mn></mtd>
+                <mtd><mn>-1</mn></mtd>
+                </mtr>
+                <mtr>
+                    <mtd><mn>1</mn></mtd>
+                    <mtd><mn>0</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>+</mo>
+        </math>
+        <math>
+            <mrow>
+            <mo>[</mo>
+            <mtable>
+                <mtr>
+                <mtd><mn>5</mn></mtd>
+                </mtr>
+                <mtr>
+                <mtd><mn>5</mn></mtd>
+                </mtr>
+            </mtable>
+            <mo>]</mo>
+            </mrow>
+        </math>
+        <p>C(-5,5)</p>
+
+        <h3 id="Shearing">Shearing</h3>
+        <p>In this, shape and zie along x-axis and y-axis. It is similar to sliding the layers in the direction to change the object.<br>If p(x,y) are original coordinates and new coordinates are p'(x',y')</p>
+        <p><strong>X-Shearing: </strong>Here, y coordinates remains same.</p>
+        <p>x' = x + shx . y<br>y = y</p>
+        <p><strong>Matrix Representation:</strong></p>
+        <math>
+            <mrow>
+                <mo>[</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>x'</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>y'</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>=</mo>
+        </math>
+        <math>
+            <mrow>
+                <mo>[</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>shx</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>0</mn></mtd>
+                        <mtd><mn>1</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mrow>
+                <mo>[</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>x</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>y</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo>]</mo>
+            </mrow>
+        </math>
+        <p><strong>Y-Shearing: </strong>Here, x coordinates remains same.</p>
+        <p>x' = x<br>y =  y + shy . x</p>
+        <p><strong>Matrix Representation:</strong></p>
+        <math>
+            <mrow>
+                <mo>[</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>x'</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>y'</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mo>=</mo>
+        </math>
+        <math>
+            <mrow>
+                <mo>[</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>0</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>shy</mn></mtd>
+                        <mtd><mn>1</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo>]</mo>
+            </mrow>
+        </math>
+        <math>
+            <mrow>
+                <mo>[</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>x</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>y</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo>]</mo>
+            </mrow>
+        </math>
+
+        <h4>Example</h4>
+        <p><strong>Here, we have three coordinates [A(2,2), B(1,1), C(3,1)], 1 unit in x shearing and 1 unit in y shearing.</strong></p>
+        <img src="cg/unit-3rd/Shearing-Example.png">
+        <p><strong>For X-Shearing</strong><br>x' = x + shx . y<br>y' = y</p>
+        <p><strong>A'</strong></p>
+        <p>x' = 2 + 1 x 2 = 4<br>y' = 2<br>A(4,2)</p>
+        <p><strong>B'</strong></p>
+        <p>x' = 1 + 1 x 1 = 2<br>y' = 1<br>B(2,1)</p>
+        <p><strong>C'</strong></p>
+        <p>x' = 3 + 1 x 1 = 4<br>y' = 1<br>C(4,1)</p>
+        <img src="cg/unit-3rd/Shearing-Example-x-shearing.png">
+
+        <p><strong>For Y-Shearing</strong><br>x' = x<br>y' = y + shy . x</p>
+        <p><strong>A'</strong></p>
+        <p>x' = 2<br>y' = 2 + 1 x 2<br>A(2,4)</p>
+        <p><strong>B'</strong></p>
+        <p>x' = 1<br>y' = 1 + 1 x 1<br>B(1,2)</p>
+        <p><strong>C'</strong></p>
+        <p>x' = 3<br>y' = 1 + 1 x 1<br>A(3,2)</p>
+        <img src="cg/unit-3rd/Shearing-Example-y-shearing.png">
     </div>
     <div id="banner">
         <p><strong>Where to now?</strong></p>
